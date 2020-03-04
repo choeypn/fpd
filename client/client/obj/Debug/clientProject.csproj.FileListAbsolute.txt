@@ -1,0 +1,10 @@
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\bin\Debug\@finally.exe.config
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\bin\Debug\@finally.exe
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\bin\Debug\@finally.pdb
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\finally.Form1.resources
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\finally.Properties.Resources.resources
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\clientProject.csproj.GenerateResource.cache
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\clientProject.csproj.CoreCompileInputs.cache
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\@finally.exe
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\@finally.pdb
+C:\Users\choeypn\Documents\gitrepo\fpd\client\finally\obj\Debug\clientProject.csprojAssemblyReference.cache
