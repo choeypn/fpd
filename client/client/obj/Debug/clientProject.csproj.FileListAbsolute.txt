@@ -18,3 +18,13 @@ C:\Users\larkinb3\491\fpd\client\client\obj\Debug\clientProject.csproj.GenerateR
 C:\Users\larkinb3\491\fpd\client\client\obj\Debug\clientProject.csproj.CoreCompileInputs.cache
 C:\Users\larkinb3\491\fpd\client\client\obj\Debug\@finally.exe
 C:\Users\larkinb3\491\fpd\client\client\obj\Debug\@finally.pdb
+C:\Users\natth\source\fpd\client\client\bin\Debug\@finally.exe.config
+C:\Users\natth\source\fpd\client\client\bin\Debug\@finally.exe
+C:\Users\natth\source\fpd\client\client\bin\Debug\@finally.pdb
+C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csprojAssemblyReference.cache
+C:\Users\natth\source\fpd\client\client\obj\Debug\finally.Form1.resources
+C:\Users\natth\source\fpd\client\client\obj\Debug\finally.Properties.Resources.resources
+C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csproj.GenerateResource.cache
+C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csproj.CoreCompileInputs.cache
+C:\Users\natth\source\fpd\client\client\obj\Debug\@finally.exe
+C:\Users\natth\source\fpd\client\client\obj\Debug\@finally.pdb
