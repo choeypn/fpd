@@ -97,4 +97,16 @@ namespace @finally
             Console.Read();
         }
     }
+
+    class Report
+    {
+        String race;
+        String hispanic;
+        String gender;
+        String reason;
+        String disposition;
+        String date;
+    }
+    
+
 }
