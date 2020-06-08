@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
+using Newtonsoft.Json;
 namespace @finally
 {
     static class Program
@@ -96,6 +96,10 @@ namespace @finally
             Console.WriteLine("\n Press Enter to continue...");
             Console.Read();
         }
+        private static string prepareJson(Report report)
+        {
+            return JsonConvert.SerializeObject(report);
+        }
     }
 
     class Report
@@ -107,6 +111,7 @@ namespace @finally
         String disposition;
         String date;
     }
+
     
 
 }
