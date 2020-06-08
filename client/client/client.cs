@@ -62,7 +62,7 @@ namespace @finally
 
 
                 // Send the message to the connected TcpServer. 
-                stream.Write(data, 0, data.Length);
+                stream.Write(data, 0, data.Length); //This will be replaced with JSON Loop that goes through and sends all the reports to the server.
 
             Console.WriteLine("Sent: {0}", message);
 
