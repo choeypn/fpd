@@ -65,6 +65,32 @@
             dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateTimePicker1.Location = new System.Drawing.Point(126, 41);
+            dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            dateTimePicker1.Size = new System.Drawing.Size(212, 20);
+            dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.UseWaitCursor = true;
+            dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            dateTimePicker2.Location = new System.Drawing.Point(461, 41);
+            dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            dateTimePicker2.ShowUpDown = true;
+            dateTimePicker2.Size = new System.Drawing.Size(106, 20);
+            dateTimePicker2.TabIndex = 3;
+            dateTimePicker2.UseWaitCursor = true;
+            dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,18 +122,6 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateTimePicker1.Location = new System.Drawing.Point(126, 41);
-            dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dateTimePicker1.Size = new System.Drawing.Size(212, 20);
-            dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.UseWaitCursor = true;
-            dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox2
             // 
@@ -144,7 +158,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button8.Location = new System.Drawing.Point(212, 159);
             this.button8.Name = "button8";
@@ -198,7 +212,7 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button12.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button12.Location = new System.Drawing.Point(212, 403);
             this.button12.Name = "button12";
@@ -221,13 +235,14 @@
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button14.Location = new System.Drawing.Point(348, 159);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(73, 34);
             this.button14.TabIndex = 18;
             this.button14.Text = "SO";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // button15
             // 
@@ -272,7 +287,7 @@
             // 
             // button19
             // 
-            this.button19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button19.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button19.Location = new System.Drawing.Point(348, 413);
             this.button19.Name = "button19";
@@ -325,7 +340,7 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button24.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button24.Location = new System.Drawing.Point(499, 471);
             this.button24.Name = "button24";
@@ -336,7 +351,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.BackColor = System.Drawing.Color.Gainsboro;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button3.Location = new System.Drawing.Point(83, 150);
             this.button3.Name = "button3";
@@ -386,20 +401,6 @@
             this.button7.TabIndex = 18;
             this.button7.Text = "W";
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new System.Drawing.Point(461, 41);
-            dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dateTimePicker2.ShowUpDown = true;
-            dateTimePicker2.Size = new System.Drawing.Size(106, 20);
-            dateTimePicker2.TabIndex = 3;
-            dateTimePicker2.UseWaitCursor = true;
-            dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox6
             // 
