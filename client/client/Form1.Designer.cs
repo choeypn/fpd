@@ -121,7 +121,6 @@
             this.buttonClear.TabIndex = 14;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // textBox2
             // 
@@ -163,7 +162,6 @@
             this.genderButtonMale.TabIndex = 18;
             this.genderButtonMale.Text = "M";
             this.genderButtonMale.UseVisualStyleBackColor = false;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonMale_Click);
             // 
             // genderButtonFemale
             // 
@@ -229,7 +227,7 @@
             this.hispanicButtonUnidentified.TabIndex = 18;
             this.hispanicButtonUnidentified.Text = "U";
             this.hispanicButtonUnidentified.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonHispUnid_Click);
+            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceWhite_Click);
             // 
             // reasonButtonSocial
             // 
@@ -240,7 +238,6 @@
             this.reasonButtonSocial.TabIndex = 18;
             this.reasonButtonSocial.Text = "SO";
             this.reasonButtonSocial.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonReasonSocial_Click);
             // 
             // reasonButtonTerry
             // 
@@ -273,7 +270,6 @@
             this.reasonButtonSpeed.TabIndex = 18;
             this.reasonButtonSpeed.Text = "SP";
             this.reasonButtonSpeed.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonReasonSpeed_Click);
             // 
             // reasonButtonDUI
             // 
@@ -284,7 +280,6 @@
             this.reasonButtonDUI.TabIndex = 18;
             this.reasonButtonDUI.Text = "CR";
             this.reasonButtonDUI.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonReasonDUI_Click);
             // 
             // reasonButtonOther
             // 
@@ -307,7 +302,6 @@
             this.dispositionButtonNoAction.TabIndex = 18;
             this.dispositionButtonNoAction.Text = "NA";
             this.dispositionButtonNoAction.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonDispNA_Click);
             // 
             // dispositionButtonVerbalWarning
             // 
@@ -329,7 +323,6 @@
             this.dispositionButtonInfraction.TabIndex = 18;
             this.dispositionButtonInfraction.Text = "IN";
             this.dispositionButtonInfraction.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonDispInfraction_Click);
             // 
             // dispositionButtonCitation
             // 
@@ -340,7 +333,6 @@
             this.dispositionButtonCitation.TabIndex = 18;
             this.dispositionButtonCitation.Text = "CI";
             this.dispositionButtonCitation.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonDispCitation_Click);
             // 
             // dispositionButtonArrest
             // 
@@ -352,7 +344,6 @@
             this.dispositionButtonArrest.TabIndex = 18;
             this.dispositionButtonArrest.Text = "AR";
             this.dispositionButtonArrest.UseVisualStyleBackColor = false;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonDispArrest_Click);
             // 
             // raceButtonAsian
             // 
@@ -387,7 +378,7 @@
             this.raceButtonNativeAmerican.TabIndex = 18;
             this.raceButtonNativeAmerican.Text = "NA";
             this.raceButtonNativeAmerican.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceNA_Click);
+            this.raceButtonNativeAmerican.Click += new System.EventHandler(this.raceButtonNativeAmerican_Click);
             // 
             // raceButtonOther
             // 
@@ -398,7 +389,7 @@
             this.raceButtonOther.TabIndex = 18;
             this.raceButtonOther.Text = "O/U";
             this.raceButtonOther.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceOther_Click);
+            this.raceButtonOther.Click += new System.EventHandler(this.raceButtonOther_Click);
             // 
             // raceButtonWhite
             // 
@@ -409,7 +400,7 @@
             this.raceButtonWhite.TabIndex = 18;
             this.raceButtonWhite.Text = "W";
             this.raceButtonWhite.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceWhite_Click);
+            this.raceButtonWhite.Click += new System.EventHandler(this.raceButtonWhite_Click);
             // 
             // textBox6
             // 

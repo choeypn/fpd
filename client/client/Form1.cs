@@ -15,6 +15,12 @@ namespace @finally
         public Form1()
         {
             InitializeComponent();
+            Report report = new Report();
+            for(int i = 0; i < 5; i++)
+            {
+                Report.setReportVal(i,-1);
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -153,5 +159,19 @@ namespace @finally
 
         }
 
+        private void raceButtonOther_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void raceButtonNativeAmerican_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void raceButtonWhite_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

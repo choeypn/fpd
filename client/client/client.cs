@@ -110,6 +110,18 @@ namespace @finally
         String reason;
         String disposition;
         String date;
+
+        static int[] reportVal = new int[5];
+
+        public static int getReportVal(int idx)
+        {
+            return reportVal[idx];
+        }
+
+        public static void setReportVal(int idx,int val)
+        {
+            reportVal[idx] = val;
+        }
     }
 
     
