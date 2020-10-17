@@ -28,3 +28,16 @@ C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csproj.GenerateR
 C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csproj.CoreCompileInputs.cache
 C:\Users\natth\source\fpd\client\client\obj\Debug\@finally.exe
 C:\Users\natth\source\fpd\client\client\obj\Debug\@finally.pdb
+C:\Users\benla\fpd\client\client\bin\Debug\@finally.exe.config
+C:\Users\benla\fpd\client\client\bin\Debug\@finally.exe
+C:\Users\benla\fpd\client\client\bin\Debug\@finally.pdb
+C:\Users\benla\fpd\client\client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\benla\fpd\client\client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csprojAssemblyReference.cache
+C:\Users\benla\fpd\client\client\obj\Debug\finally.Form1.resources
+C:\Users\benla\fpd\client\client\obj\Debug\finally.Properties.Resources.resources
+C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csproj.GenerateResource.cache
+C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csproj.CoreCompileInputs.cache
+C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csproj.CopyComplete
+C:\Users\benla\fpd\client\client\obj\Debug\@finally.exe
+C:\Users\benla\fpd\client\client\obj\Debug\@finally.pdb
