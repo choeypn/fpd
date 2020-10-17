@@ -100,7 +100,6 @@
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Race";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonSubmit
             // 
@@ -111,19 +110,10 @@
             this.buttonSubmit.TabIndex = 6;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
-            this.buttonSubmit.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonMale_Click);
             // 
             // buttonClear
             // 
-<<<<<<< HEAD
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(625, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 45);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-=======
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.buttonClear.Location = new System.Drawing.Point(625, 341);
             this.buttonClear.Name = "buttonClear";
@@ -131,7 +121,6 @@
             this.buttonClear.TabIndex = 14;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
->>>>>>> 9fb971686ae1d2d77bbd271a575da65c2b3d8110
             // 
             // textBox2
             // 
@@ -142,7 +131,6 @@
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Gender";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox3
             // 
@@ -153,7 +141,6 @@
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = "Reason";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox4
             // 
@@ -164,41 +151,7 @@
             this.textBox4.TabIndex = 5;
             this.textBox4.Text = "Disposition";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-<<<<<<< HEAD
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button8.Location = new System.Drawing.Point(212, 159);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(73, 34);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "M";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button9.Location = new System.Drawing.Point(212, 210);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(73, 34);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "F";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button10.Location = new System.Drawing.Point(212, 260);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(73, 34);
-            this.button10.TabIndex = 18;
-            this.button10.Text = "U";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-=======
             // genderButtonMale
             // 
             this.genderButtonMale.BackColor = System.Drawing.SystemColors.Highlight;
@@ -219,7 +172,7 @@
             this.genderButtonFemale.TabIndex = 18;
             this.genderButtonFemale.Text = "F";
             this.genderButtonFemale.UseVisualStyleBackColor = true;
-            this.genderButtonFemale.Click += new System.EventHandler(this.button9_Click);
+            this.genderButtonFemale.Click += new System.EventHandler(this.buttonFemale_Click);
             // 
             // genderButtonUnidentified
             // 
@@ -230,8 +183,7 @@
             this.genderButtonUnidentified.TabIndex = 18;
             this.genderButtonUnidentified.Text = "U";
             this.genderButtonUnidentified.UseVisualStyleBackColor = true;
-            this.genderButtonUnidentified.Click += new System.EventHandler(this.button10_Click);
->>>>>>> 9fb971686ae1d2d77bbd271a575da65c2b3d8110
+            this.genderButtonUnidentified.Click += new System.EventHandler(this.buttonUnid_Click);
             // 
             // textBox5
             // 
@@ -242,212 +194,8 @@
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Hispanic";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-<<<<<<< HEAD
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button11.Location = new System.Drawing.Point(212, 352);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(73, 34);
-            this.button11.TabIndex = 18;
-            this.button11.Text = "Y";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button12.Location = new System.Drawing.Point(212, 403);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(73, 34);
-            this.button12.TabIndex = 18;
-            this.button12.Text = "N";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button13.Location = new System.Drawing.Point(212, 453);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(73, 34);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "U";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button14.Location = new System.Drawing.Point(348, 159);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(73, 34);
-            this.button14.TabIndex = 18;
-            this.button14.Text = "SO";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button15.Location = new System.Drawing.Point(348, 210);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(73, 34);
-            this.button15.TabIndex = 18;
-            this.button15.Text = "TE";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button16.Location = new System.Drawing.Point(348, 260);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(73, 34);
-            this.button16.TabIndex = 18;
-            this.button16.Text = "EQ";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button17.Location = new System.Drawing.Point(348, 312);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(73, 34);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "SP";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button18.Location = new System.Drawing.Point(348, 363);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(73, 34);
-            this.button18.TabIndex = 18;
-            this.button18.Text = "CR";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button19.Location = new System.Drawing.Point(348, 413);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(73, 34);
-            this.button19.TabIndex = 18;
-            this.button19.Text = "OT";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button20
-            // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button20.Location = new System.Drawing.Point(499, 150);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(71, 64);
-            this.button20.TabIndex = 18;
-            this.button20.Text = "NA";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button21.Location = new System.Drawing.Point(499, 230);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(71, 64);
-            this.button21.TabIndex = 18;
-            this.button21.Text = "VW";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button22
-            // 
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button22.Location = new System.Drawing.Point(499, 312);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(71, 64);
-            this.button22.TabIndex = 18;
-            this.button22.Text = "IN";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button23.Location = new System.Drawing.Point(499, 392);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(71, 64);
-            this.button23.TabIndex = 18;
-            this.button23.Text = "CI";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button24.Location = new System.Drawing.Point(499, 471);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(71, 64);
-            this.button24.TabIndex = 18;
-            this.button24.Text = "AR";
-            this.button24.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button3.Location = new System.Drawing.Point(83, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 64);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "A/PI";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button4.Location = new System.Drawing.Point(83, 230);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 64);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "B";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button5.Location = new System.Drawing.Point(83, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(71, 64);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "NA";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button6.Location = new System.Drawing.Point(83, 392);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(71, 64);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "O/U";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button7.Location = new System.Drawing.Point(83, 471);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(71, 64);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "W";
-            this.button7.UseVisualStyleBackColor = true;
-=======
             // hispanicButtonYes
             // 
             this.hispanicButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -457,7 +205,7 @@
             this.hispanicButtonYes.TabIndex = 18;
             this.hispanicButtonYes.Text = "Y";
             this.hispanicButtonYes.UseVisualStyleBackColor = true;
-            this.hispanicButtonYes.Click += new System.EventHandler(this.button11_Click);
+            this.hispanicButtonYes.Click += new System.EventHandler(this.buttonHispYes_Click);
             // 
             // hispanicButtonNo
             // 
@@ -469,7 +217,7 @@
             this.hispanicButtonNo.TabIndex = 18;
             this.hispanicButtonNo.Text = "N";
             this.hispanicButtonNo.UseVisualStyleBackColor = false;
-            this.hispanicButtonNo.Click += new System.EventHandler(this.button12_Click);
+            this.hispanicButtonNo.Click += new System.EventHandler(this.buttonHispNo_Click);
             // 
             // hispanicButtonUnidentified
             // 
@@ -480,7 +228,7 @@
             this.hispanicButtonUnidentified.TabIndex = 18;
             this.hispanicButtonUnidentified.Text = "U";
             this.hispanicButtonUnidentified.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.button10_Click);
+            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceWhite_Click);
             // 
             // reasonButtonSocial
             // 
@@ -511,7 +259,7 @@
             this.reasonButtonVehicleEquipment.TabIndex = 18;
             this.reasonButtonVehicleEquipment.Text = "EQ";
             this.reasonButtonVehicleEquipment.UseVisualStyleBackColor = true;
-            this.reasonButtonVehicleEquipment.Click += new System.EventHandler(this.button10_Click);
+            this.reasonButtonVehicleEquipment.Click += new System.EventHandler(this.buttonReasonVehicle_Click);
             // 
             // reasonButtonSpeed
             // 
@@ -543,7 +291,7 @@
             this.reasonButtonOther.TabIndex = 18;
             this.reasonButtonOther.Text = "OT";
             this.reasonButtonOther.UseVisualStyleBackColor = false;
-            this.reasonButtonOther.Click += new System.EventHandler(this.button10_Click);
+            this.reasonButtonOther.Click += new System.EventHandler(this.buttonReasonOther_Click);
             // 
             // dispositionButtonNoAction
             // 
@@ -564,7 +312,7 @@
             this.dispositionButtonVerbalWarning.TabIndex = 18;
             this.dispositionButtonVerbalWarning.Text = "VW";
             this.dispositionButtonVerbalWarning.UseVisualStyleBackColor = true;
-            this.dispositionButtonVerbalWarning.Click += new System.EventHandler(this.button4_Click);
+            this.dispositionButtonVerbalWarning.Click += new System.EventHandler(this.buttonDispVerbal_Click);
             // 
             // dispositionButtonInfraction
             // 
@@ -607,7 +355,7 @@
             this.raceButtonAsian.TabIndex = 18;
             this.raceButtonAsian.Text = "A/PI";
             this.raceButtonAsian.UseVisualStyleBackColor = false;
-            this.raceButtonAsian.Click += new System.EventHandler(this.button3_Click);
+            this.raceButtonAsian.Click += new System.EventHandler(this.buttonRaceAsian_Click);
             // 
             // raceButtonBlack
             // 
@@ -618,7 +366,7 @@
             this.raceButtonBlack.TabIndex = 18;
             this.raceButtonBlack.Text = "B";
             this.raceButtonBlack.UseVisualStyleBackColor = true;
-            this.raceButtonBlack.Click += new System.EventHandler(this.button4_Click);
+            this.raceButtonBlack.Click += new System.EventHandler(this.buttonRaceBlack_Click);
             // 
             // raceButtonNativeAmerican
             // 
@@ -650,7 +398,6 @@
             this.raceButtonWhite.TabIndex = 18;
             this.raceButtonWhite.Text = "W";
             this.raceButtonWhite.UseVisualStyleBackColor = true;
->>>>>>> 9fb971686ae1d2d77bbd271a575da65c2b3d8110
             // 
             // textBox6
             // 
@@ -661,7 +408,6 @@
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "Date";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox7
             // 
@@ -672,7 +418,6 @@
             this.textBox7.TabIndex = 5;
             this.textBox7.Text = "Time";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 

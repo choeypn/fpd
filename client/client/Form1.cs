@@ -17,85 +17,7 @@ namespace @finally
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Button click = (Button)sender;
-            click.Text = "Submitted";
-            click.Enabled = false;
-            Console.WriteLine(click.Text);
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -107,52 +29,133 @@ namespace @finally
             timePicker.ShowUpDown = true;
         }
 
-        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            Button click = (Button)sender;
+            click.Text = "Submitted";
+            click.Enabled = false;
+            Console.WriteLine(click.Text);
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+
+        private void buttonMale_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void buttonFemale_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+
+        private void buttonUnid_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonHispYes_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void buttonHispNo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void buttonHispUnid_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-<<<<<<< HEAD
-=======
-
-        private void button9_Click(object sender, EventArgs e)
+        private void buttonReasonSocial_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonReasonTerry_Click(object sender, EventArgs e)
         {
 
         }
->>>>>>> 9fb971686ae1d2d77bbd271a575da65c2b3d8110
+
+        private void buttonReasonVehicle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReasonSpeed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReasonDUI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReasonOther_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDispNA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDispVerbal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDispInfraction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDispCitation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDispArrest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRaceAsian_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRaceBlack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRaceNA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRaceOther_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRaceWhite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
