@@ -103,24 +103,27 @@
             // 
             // buttonSubmit
             // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.LightGray;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.buttonSubmit.Location = new System.Drawing.Point(625, 249);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(102, 45);
             this.buttonSubmit.TabIndex = 6;
             this.buttonSubmit.Text = "Submit";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonClear
             // 
+            this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.buttonClear.Location = new System.Drawing.Point(625, 341);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(102, 45);
             this.buttonClear.TabIndex = 14;
             this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // textBox2
             // 
@@ -154,7 +157,7 @@
             // 
             // genderButtonMale
             // 
-            this.genderButtonMale.BackColor = System.Drawing.SystemColors.Highlight;
+            this.genderButtonMale.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.genderButtonMale.Location = new System.Drawing.Point(212, 159);
             this.genderButtonMale.Name = "genderButtonMale";
@@ -162,27 +165,30 @@
             this.genderButtonMale.TabIndex = 18;
             this.genderButtonMale.Text = "M";
             this.genderButtonMale.UseVisualStyleBackColor = false;
+            this.genderButtonMale.Click += new System.EventHandler(this.buttonMale_Click);
             // 
             // genderButtonFemale
             // 
+            this.genderButtonFemale.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.genderButtonFemale.Location = new System.Drawing.Point(212, 210);
             this.genderButtonFemale.Name = "genderButtonFemale";
             this.genderButtonFemale.Size = new System.Drawing.Size(73, 34);
             this.genderButtonFemale.TabIndex = 18;
             this.genderButtonFemale.Text = "F";
-            this.genderButtonFemale.UseVisualStyleBackColor = true;
+            this.genderButtonFemale.UseVisualStyleBackColor = false;
             this.genderButtonFemale.Click += new System.EventHandler(this.buttonFemale_Click);
             // 
             // genderButtonUnidentified
             // 
+            this.genderButtonUnidentified.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonUnidentified.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.genderButtonUnidentified.Location = new System.Drawing.Point(212, 260);
             this.genderButtonUnidentified.Name = "genderButtonUnidentified";
             this.genderButtonUnidentified.Size = new System.Drawing.Size(73, 34);
             this.genderButtonUnidentified.TabIndex = 18;
             this.genderButtonUnidentified.Text = "U";
-            this.genderButtonUnidentified.UseVisualStyleBackColor = true;
+            this.genderButtonUnidentified.UseVisualStyleBackColor = false;
             this.genderButtonUnidentified.Click += new System.EventHandler(this.buttonUnid_Click);
             // 
             // textBox5
@@ -197,18 +203,19 @@
             // 
             // hispanicButtonYes
             // 
+            this.hispanicButtonYes.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.hispanicButtonYes.Location = new System.Drawing.Point(212, 352);
             this.hispanicButtonYes.Name = "hispanicButtonYes";
             this.hispanicButtonYes.Size = new System.Drawing.Size(73, 34);
             this.hispanicButtonYes.TabIndex = 18;
             this.hispanicButtonYes.Text = "Y";
-            this.hispanicButtonYes.UseVisualStyleBackColor = true;
+            this.hispanicButtonYes.UseVisualStyleBackColor = false;
             this.hispanicButtonYes.Click += new System.EventHandler(this.buttonHispYes_Click);
             // 
             // hispanicButtonNo
             // 
-            this.hispanicButtonNo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.hispanicButtonNo.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.hispanicButtonNo.Location = new System.Drawing.Point(212, 403);
             this.hispanicButtonNo.Name = "hispanicButtonNo";
@@ -220,70 +227,79 @@
             // 
             // hispanicButtonUnidentified
             // 
+            this.hispanicButtonUnidentified.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonUnidentified.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.hispanicButtonUnidentified.Location = new System.Drawing.Point(212, 453);
             this.hispanicButtonUnidentified.Name = "hispanicButtonUnidentified";
             this.hispanicButtonUnidentified.Size = new System.Drawing.Size(73, 34);
             this.hispanicButtonUnidentified.TabIndex = 18;
             this.hispanicButtonUnidentified.Text = "U";
-            this.hispanicButtonUnidentified.UseVisualStyleBackColor = true;
-            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonRaceWhite_Click);
+            this.hispanicButtonUnidentified.UseVisualStyleBackColor = false;
+            this.hispanicButtonUnidentified.Click += new System.EventHandler(this.buttonHispUnid_Click);
             // 
             // reasonButtonSocial
             // 
+            this.reasonButtonSocial.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonSocial.Location = new System.Drawing.Point(348, 159);
             this.reasonButtonSocial.Name = "reasonButtonSocial";
             this.reasonButtonSocial.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonSocial.TabIndex = 18;
             this.reasonButtonSocial.Text = "SO";
-            this.reasonButtonSocial.UseVisualStyleBackColor = true;
+            this.reasonButtonSocial.UseVisualStyleBackColor = false;
+            this.reasonButtonSocial.Click += new System.EventHandler(this.buttonReasonSocial_Click);
             // 
             // reasonButtonTerry
             // 
+            this.reasonButtonTerry.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonTerry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonTerry.Location = new System.Drawing.Point(348, 210);
             this.reasonButtonTerry.Name = "reasonButtonTerry";
             this.reasonButtonTerry.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonTerry.TabIndex = 18;
             this.reasonButtonTerry.Text = "TE";
-            this.reasonButtonTerry.UseVisualStyleBackColor = true;
+            this.reasonButtonTerry.UseVisualStyleBackColor = false;
             this.reasonButtonTerry.Click += new System.EventHandler(this.buttonReasonTerry_Click);
             // 
             // reasonButtonVehicleEquipment
             // 
+            this.reasonButtonVehicleEquipment.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonVehicleEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonVehicleEquipment.Location = new System.Drawing.Point(348, 260);
             this.reasonButtonVehicleEquipment.Name = "reasonButtonVehicleEquipment";
             this.reasonButtonVehicleEquipment.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonVehicleEquipment.TabIndex = 18;
             this.reasonButtonVehicleEquipment.Text = "EQ";
-            this.reasonButtonVehicleEquipment.UseVisualStyleBackColor = true;
+            this.reasonButtonVehicleEquipment.UseVisualStyleBackColor = false;
             this.reasonButtonVehicleEquipment.Click += new System.EventHandler(this.buttonReasonVehicle_Click);
             // 
             // reasonButtonSpeed
             // 
+            this.reasonButtonSpeed.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonSpeed.Location = new System.Drawing.Point(348, 312);
             this.reasonButtonSpeed.Name = "reasonButtonSpeed";
             this.reasonButtonSpeed.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonSpeed.TabIndex = 18;
             this.reasonButtonSpeed.Text = "SP";
-            this.reasonButtonSpeed.UseVisualStyleBackColor = true;
+            this.reasonButtonSpeed.UseVisualStyleBackColor = false;
+            this.reasonButtonSpeed.Click += new System.EventHandler(this.buttonReasonSpeed_Click);
             // 
             // reasonButtonDUI
             // 
+            this.reasonButtonDUI.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonDUI.Location = new System.Drawing.Point(348, 363);
             this.reasonButtonDUI.Name = "reasonButtonDUI";
             this.reasonButtonDUI.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonDUI.TabIndex = 18;
             this.reasonButtonDUI.Text = "CR";
-            this.reasonButtonDUI.UseVisualStyleBackColor = true;
+            this.reasonButtonDUI.UseVisualStyleBackColor = false;
+            this.reasonButtonDUI.Click += new System.EventHandler(this.buttonReasonDUI_Click);
             // 
             // reasonButtonOther
             // 
-            this.reasonButtonOther.BackColor = System.Drawing.SystemColors.Highlight;
+            this.reasonButtonOther.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reasonButtonOther.Location = new System.Drawing.Point(348, 413);
             this.reasonButtonOther.Name = "reasonButtonOther";
@@ -295,48 +311,55 @@
             // 
             // dispositionButtonNoAction
             // 
+            this.dispositionButtonNoAction.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonNoAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dispositionButtonNoAction.Location = new System.Drawing.Point(499, 150);
             this.dispositionButtonNoAction.Name = "dispositionButtonNoAction";
             this.dispositionButtonNoAction.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonNoAction.TabIndex = 18;
             this.dispositionButtonNoAction.Text = "NA";
-            this.dispositionButtonNoAction.UseVisualStyleBackColor = true;
+            this.dispositionButtonNoAction.UseVisualStyleBackColor = false;
+            this.dispositionButtonNoAction.Click += new System.EventHandler(this.buttonDispNA_Click);
             // 
             // dispositionButtonVerbalWarning
             // 
+            this.dispositionButtonVerbalWarning.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonVerbalWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dispositionButtonVerbalWarning.Location = new System.Drawing.Point(499, 230);
             this.dispositionButtonVerbalWarning.Name = "dispositionButtonVerbalWarning";
             this.dispositionButtonVerbalWarning.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonVerbalWarning.TabIndex = 18;
             this.dispositionButtonVerbalWarning.Text = "VW";
-            this.dispositionButtonVerbalWarning.UseVisualStyleBackColor = true;
+            this.dispositionButtonVerbalWarning.UseVisualStyleBackColor = false;
             this.dispositionButtonVerbalWarning.Click += new System.EventHandler(this.buttonDispVerbal_Click);
             // 
             // dispositionButtonInfraction
             // 
+            this.dispositionButtonInfraction.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonInfraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dispositionButtonInfraction.Location = new System.Drawing.Point(499, 312);
             this.dispositionButtonInfraction.Name = "dispositionButtonInfraction";
             this.dispositionButtonInfraction.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonInfraction.TabIndex = 18;
             this.dispositionButtonInfraction.Text = "IN";
-            this.dispositionButtonInfraction.UseVisualStyleBackColor = true;
+            this.dispositionButtonInfraction.UseVisualStyleBackColor = false;
+            this.dispositionButtonInfraction.Click += new System.EventHandler(this.buttonDispInfraction_Click);
             // 
             // dispositionButtonCitation
             // 
+            this.dispositionButtonCitation.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonCitation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dispositionButtonCitation.Location = new System.Drawing.Point(499, 392);
             this.dispositionButtonCitation.Name = "dispositionButtonCitation";
             this.dispositionButtonCitation.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonCitation.TabIndex = 18;
             this.dispositionButtonCitation.Text = "CI";
-            this.dispositionButtonCitation.UseVisualStyleBackColor = true;
+            this.dispositionButtonCitation.UseVisualStyleBackColor = false;
+            this.dispositionButtonCitation.Click += new System.EventHandler(this.buttonDispCitation_Click);
             // 
             // dispositionButtonArrest
             // 
-            this.dispositionButtonArrest.BackColor = System.Drawing.SystemColors.Highlight;
+            this.dispositionButtonArrest.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonArrest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dispositionButtonArrest.Location = new System.Drawing.Point(499, 471);
             this.dispositionButtonArrest.Name = "dispositionButtonArrest";
@@ -344,10 +367,11 @@
             this.dispositionButtonArrest.TabIndex = 18;
             this.dispositionButtonArrest.Text = "AR";
             this.dispositionButtonArrest.UseVisualStyleBackColor = false;
+            this.dispositionButtonArrest.Click += new System.EventHandler(this.buttonDispArrest_Click);
             // 
             // raceButtonAsian
             // 
-            this.raceButtonAsian.BackColor = System.Drawing.SystemColors.Highlight;
+            this.raceButtonAsian.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonAsian.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.raceButtonAsian.Location = new System.Drawing.Point(83, 150);
             this.raceButtonAsian.Name = "raceButtonAsian";
@@ -359,17 +383,19 @@
             // 
             // raceButtonBlack
             // 
+            this.raceButtonBlack.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonBlack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.raceButtonBlack.Location = new System.Drawing.Point(83, 230);
             this.raceButtonBlack.Name = "raceButtonBlack";
             this.raceButtonBlack.Size = new System.Drawing.Size(71, 64);
             this.raceButtonBlack.TabIndex = 18;
             this.raceButtonBlack.Text = "B";
-            this.raceButtonBlack.UseVisualStyleBackColor = true;
+            this.raceButtonBlack.UseVisualStyleBackColor = false;
             this.raceButtonBlack.Click += new System.EventHandler(this.buttonRaceBlack_Click);
             // 
             // raceButtonNativeAmerican
             // 
+            this.raceButtonNativeAmerican.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonNativeAmerican.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.raceButtonNativeAmerican.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.raceButtonNativeAmerican.Location = new System.Drawing.Point(83, 312);
@@ -377,30 +403,32 @@
             this.raceButtonNativeAmerican.Size = new System.Drawing.Size(71, 64);
             this.raceButtonNativeAmerican.TabIndex = 18;
             this.raceButtonNativeAmerican.Text = "NA";
-            this.raceButtonNativeAmerican.UseVisualStyleBackColor = true;
-            this.raceButtonNativeAmerican.Click += new System.EventHandler(this.raceButtonNativeAmerican_Click);
+            this.raceButtonNativeAmerican.UseVisualStyleBackColor = false;
+            this.raceButtonNativeAmerican.Click += new System.EventHandler(this.buttonRaceNativeAmerican_Click);
             // 
             // raceButtonOther
             // 
+            this.raceButtonOther.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.raceButtonOther.Location = new System.Drawing.Point(83, 392);
             this.raceButtonOther.Name = "raceButtonOther";
             this.raceButtonOther.Size = new System.Drawing.Size(71, 64);
             this.raceButtonOther.TabIndex = 18;
             this.raceButtonOther.Text = "O/U";
-            this.raceButtonOther.UseVisualStyleBackColor = true;
-            this.raceButtonOther.Click += new System.EventHandler(this.raceButtonOther_Click);
+            this.raceButtonOther.UseVisualStyleBackColor = false;
+            this.raceButtonOther.Click += new System.EventHandler(this.buttonRaceOther_Click);
             // 
             // raceButtonWhite
             // 
+            this.raceButtonWhite.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonWhite.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.raceButtonWhite.Location = new System.Drawing.Point(83, 471);
             this.raceButtonWhite.Name = "raceButtonWhite";
             this.raceButtonWhite.Size = new System.Drawing.Size(71, 64);
             this.raceButtonWhite.TabIndex = 18;
             this.raceButtonWhite.Text = "W";
-            this.raceButtonWhite.UseVisualStyleBackColor = true;
-            this.raceButtonWhite.Click += new System.EventHandler(this.raceButtonWhite_Click);
+            this.raceButtonWhite.UseVisualStyleBackColor = false;
+            this.raceButtonWhite.Click += new System.EventHandler(this.buttonRaceWhite_Click);
             // 
             // textBox6
             // 
