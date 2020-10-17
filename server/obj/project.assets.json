@@ -688,23 +688,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye236\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\stumb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\fs1\\home\\nguye236\\Documents\\Ferndale PD Senior Project\\fpd\\server\\server.csproj",
+      "projectUniqueName": "f:\\!Projects!\\CSCI\\Senior Project\\fpd\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "\\\\fs1\\home\\nguye236\\Documents\\Ferndale PD Senior Project\\fpd\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\nguye236\\.nuget\\packages\\",
-      "outputPath": "\\\\fs1\\home\\nguye236\\Documents\\Ferndale PD Senior Project\\fpd\\server\\obj\\",
+      "projectPath": "f:\\!Projects!\\CSCI\\Senior Project\\fpd\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\stumb\\.nuget\\packages\\",
+      "outputPath": "f:\\!Projects!\\CSCI\\Senior Project\\fpd\\server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nguye236\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\stumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -729,16 +725,23 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

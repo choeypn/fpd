@@ -141,18 +141,5 @@ namespace @finally
         {
 
         }
-<<<<<<< HEAD
-=======
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> 9fb971686ae1d2d77bbd271a575da65c2b3d8110
     }
 }
