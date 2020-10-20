@@ -21,21 +21,21 @@ namespace @finally
             try
             {
 
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            TcpClient client = new TcpClient();
-            client.Connect("127.0.0.1", 9999);
-            String message = "hello";
-            // Translate the passed message into ASCII and store it as a Byte array.
-            Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
-            // Get a client stream for reading and writing.
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+                TcpClient client = new TcpClient();
+                client.Connect("127.0.0.1", 9999);
+                String message = "hello";
+                // Translate the passed message into ASCII and store it as a Byte array.
+                Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
-            NetworkStream stream = client.GetStream();
+                // Get a client stream for reading and writing.
 
-            // read message from server
+                NetworkStream stream = client.GetStream();
+
+                // read message from server
                 if (stream.CanRead)
                 {
                     byte[] myReadBuffer = new byte[1024];
@@ -64,24 +64,24 @@ namespace @finally
                 // Send the message to the connected TcpServer. 
                 stream.Write(data, 0, data.Length); //This will be replaced with JSON Loop that goes through and sends all the reports to the server.
 
-            Console.WriteLine("Sent: {0}", message);
+                Console.WriteLine("Sent: {0}", message);
 
-            // Receive the TcpServer.response.
+                // Receive the TcpServer.response.
 
-            // Buffer to store the response bytes.
-            data = new Byte[256];
+                // Buffer to store the response bytes.
+                data = new Byte[256];
 
-            // String to store the response ASCII representation.
-            String responseData = String.Empty;
+                // String to store the response ASCII representation.
+                String responseData = String.Empty;
 
-            // Read the first batch of the TcpServer response bytes.
-            Int32 bytes = stream.Read(data, 0, data.Length);
-            responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
-            Console.WriteLine("Received: {0}", responseData);
+                // Read the first batch of the TcpServer response bytes.
+                Int32 bytes = stream.Read(data, 0, data.Length);
+                responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                Console.WriteLine("Received: {0}", responseData);
 
-            // Close everything.
-            stream.Close();
-            client.Close();
+                // Close everything.
+                stream.Close();
+                client.Close();
             }
 
             catch (ArgumentNullException e)
@@ -118,12 +118,124 @@ namespace @finally
             return reportVal[idx];
         }
 
-        public static void setReportVal(int idx,int val)
+        public static void setReportVal(int idx, int val)
         {
             reportVal[idx] = val;
         }
+
+        public static String getRaceString(int val)
+        {
+            String ret = "";
+            switch (val)
+            {
+                case 0:
+                    ret = "Asian/Pacific Islander";
+                    break;
+                case 1:
+                    ret = "Black";
+                    break;
+                case 2:
+                    ret = "Native American";
+                    break;
+                case 3:
+                    ret = "Other/Unknown";
+                    break;
+                case 4:
+                    ret = "White";
+                    break;
+
+            }
+            return ret;
+        }
+
+        public static String getGenderString(int val)
+        {
+            String ret = "";
+            switch (val)
+            {
+                case 0:
+                    ret = "Male";
+                    break;
+                case 1:
+                    ret = "Female";
+                    break;
+                case 2:
+                    ret = "Unidentified";
+                    break;
+            }
+            return ret;
+        }
+
+        public static String getHispanicString(int val)
+        {
+            String ret = "";
+            switch (val)
+            {
+                case 0:
+                    ret = "Yes";
+                    break;
+                case 1:
+                    ret = "No";
+                    break;
+                case 2:
+                    ret = "Unidentified";
+                    break;
+            }
+            return ret;
+        }
+
+        public static String getReasonString(int val)
+        {
+            String ret = "";
+            switch (val)
+            {
+                case 0:
+                    ret = "Social";
+                    break;
+                case 1:
+                    ret = "Terry";
+                    break;
+                case 2:
+                    ret = "Vehicle";
+                    break;
+                case 3:
+                    ret = "Speed";
+                    break;
+                case 4:
+                    ret = "DUI";
+                    break;
+                case 5:
+                    ret = "Other";
+                    break;
+
+            }
+            return ret;
+        }
+
+        public static String getDispString(int val)
+        {
+            String ret = "";
+            switch (val)
+            {
+                case 0:
+                    ret = "NO Action";
+                    break;
+                case 1:
+                    ret = "Verbal Warning";
+                    break;
+                case 2:
+                    ret = "Infraction";
+                    break;
+                case 3:
+                    ret = "Citation";
+                    break;
+                case 4:
+                    ret = "Arrest";
+                    break;
+
+            }
+            return ret;
+        }
+
     }
-
-    
-
 }
