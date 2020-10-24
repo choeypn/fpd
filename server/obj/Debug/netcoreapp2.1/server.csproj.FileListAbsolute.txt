@@ -1,0 +1,12 @@
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.csprojAssemblyReference.cache
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfoInputs.cache
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfo.cs
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.csproj.CoreCompileInputs.cache
+f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.deps.json
+f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.json
+f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.dev.json
+f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.dll
+f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.pdb
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.dll
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.pdb
+f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.genruntimeconfig.cache
