@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "f:\\!Projects!\\CSCI\\Senior Project\\fpd\\server\\server.csproj": {}
   },
   "projects": {
@@ -15,6 +16,25 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "E:\\STORAGE\\games\\fpd\\server\\server.csproj": {}
+  },
+  "projects": {
+    "E:\\STORAGE\\games\\fpd\\server\\server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\STORAGE\\games\\fpd\\server\\server.csproj",
+        "projectName": "server",
+        "projectPath": "E:\\STORAGE\\games\\fpd\\server\\server.csproj",
+        "packagesPath": "C:\\Users\\ellio\\.nuget\\packages\\",
+        "outputPath": "E:\\STORAGE\\games\\fpd\\server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ellio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +63,7 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+<<<<<<< HEAD
             }
           },
           "imports": [
@@ -56,6 +77,23 @@
           "assetTargetFallback": true,
           "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+=======
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
         }
       }
     }

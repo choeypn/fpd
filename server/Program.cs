@@ -6,19 +6,35 @@ using System.Threading;
 
 using System.Net;
 using System.Net.Sockets;
+using MySql.Data.MySqlClient;
+
 namespace server
 {
     class Program
     {
         static void Main(string[] args)
         {
+            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+            builder.UserID = "root";
+            builder.Password = "";
+            builder.Server = "localhost";
+            builder.Port = 3306;
+            builder.Database = "fpdtrafficstops";
+            MySqlConnection connection = new MySqlConnection(builder.ConnectionString);
+            
             TcpListener server = new TcpListener(IPAddress.Any, 9999);
             server.Start();
             while (true)
             {
+<<<<<<< HEAD
                 TcpClient clientSocket = server.AcceptTcpClient();
 
                 NetworkStream ns = clientSocket.GetStream();
+=======
+                TcpClient client = server.AcceptTcpClient();
+
+                NetworkStream ns = client.GetStream();
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
 
                 byte[] test = new byte[100];
                // test = Encoding.Default.GetBytes("test 1 2 3");
@@ -29,6 +45,7 @@ namespace server
                 client.clientOperation(clientSocket);
                 
 
+<<<<<<< HEAD
 
             }
         }
@@ -56,6 +73,11 @@ namespace server
             while (currentClient.Connected)
             {
                 if (currentClient.Available != 0)
+=======
+                ns.Write(test, 0, test.Length);
+
+                while (client.Connected)
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
                 {
                     byte[] ctest = new byte[1024];
                     Console.WriteLine("Waiting to receive data");
@@ -63,9 +85,26 @@ namespace server
                     Console.WriteLine("Data received"); //The reports
 
                     Console.WriteLine(Encoding.Default.GetString(ctest));
+<<<<<<< HEAD
                     ns.Flush();
+=======
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
                 }
             }
+            
+        }
+
+        static void recordReport(MySqlConnection connection, String date, String time, String race, String ethnicity, String gender, String reason, String disposition)
+        {
+            Console.WriteLine("Record started");
+            MySqlCommand command = new MySqlCommand("INSERT INTO reports (stopDate, stopTime, race, ethnicity, gender, reason, disposition)" +
+                " VALUES ('" + date + "', '" + time + "', '" + race + "', '" + ethnicity + "', '" + gender + "', '" + reason + "', '" + disposition + "')", connection);
+            Console.WriteLine("Command created");
+            connection.Open();
+            Console.WriteLine("Connection opened");
+            command.ExecuteNonQuery();
+            Console.WriteLine("Insert completed");
+            connection.Close();
         }
     }
 }

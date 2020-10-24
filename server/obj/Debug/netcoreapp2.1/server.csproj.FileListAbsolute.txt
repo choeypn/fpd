@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.csprojAssemblyReference.cache
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfoInputs.cache
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfo.cs
@@ -10,3 +11,16 @@ f:\!Projects!\CSCI\Senior Project\fpd\server\bin\Debug\netcoreapp2.1\server.pdb
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.dll
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.pdb
 f:\!Projects!\CSCI\Senior Project\fpd\server\obj\Debug\netcoreapp2.1\server.genruntimeconfig.cache
+=======
+E:\STORAGE\games\fpd\server\bin\Debug\netcoreapp2.1\server.deps.json
+E:\STORAGE\games\fpd\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.json
+E:\STORAGE\games\fpd\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.dev.json
+E:\STORAGE\games\fpd\server\bin\Debug\netcoreapp2.1\server.dll
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.csprojAssemblyReference.cache
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfoInputs.cache
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.AssemblyInfo.cs
+E:\STORAGE\games\fpd\server\bin\Debug\netcoreapp2.1\server.pdb
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.dll
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.pdb
+E:\STORAGE\games\fpd\server\obj\Debug\netcoreapp2.1\server.csproj.CoreCompileInputs.cache
+>>>>>>> 29a1eb41cb734f9eb1358f77275b9ee616be6c1b
