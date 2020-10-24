@@ -41,3 +41,6 @@ C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csproj.CoreCompileInput
 C:\Users\benla\fpd\client\client\obj\Debug\clientProject.csproj.CopyComplete
 C:\Users\benla\fpd\client\client\obj\Debug\@finally.exe
 C:\Users\benla\fpd\client\client\obj\Debug\@finally.pdb
+C:\Users\natth\source\fpd\client\client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\natth\source\fpd\client\client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\natth\source\fpd\client\client\obj\Debug\clientProject.csproj.CopyComplete
