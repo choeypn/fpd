@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,59 @@ namespace @finally
             Console.WriteLine(Report.getTimeString());
             Console.WriteLine(Report.getDateString());
             Console.WriteLine("Submitted");
+            saveToText();
+        }
+
+
+        /* Sending to server format
+    sw.Write(Report.getDateString() + "&"
+    + Report.getTimeString() + "&"
+    + Report.getRaceString(Report.getReportVal(0)) + "&"
+    + Report.getGenderString(Report.getReportVal(1)) + "&"
+    + Report.getHispanicString(Report.getReportVal(2)) + "&"
+    + Report.getReasonString(Report.getReportVal(3)) + "&"
+    + Report.getDispString(Report.getReportVal(4)));
+        */
+        public static void saveToText()
+        {
+            //string path = @"c:\temp\test.txt";
+            int num = 0;
+            string filename = "form"+num+".txt";
+            string[] path = { @"c:\temp", filename};
+            string fullpath = Path.Combine(path);
+            if (File.Exists(fullpath))
+            {
+                while (File.Exists(fullpath)) 
+                {
+                    num++;
+                    filename = "form"+num+".txt";
+                    path[1] = filename;
+                    fullpath = Path.Combine(path);
+                }
+                using (StreamWriter sw = File.CreateText(fullpath))
+                {
+                    sw.Write(getReportString());
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(fullpath))
+                {
+                    sw.Write(getReportString());
+                }
+            }
+
+        }
+
+        public static string getReportString()
+        {
+            return (Report.getDateString() + "\n"
+                            + Report.getTimeString() + "\n"
+                            + "Race: " + Report.getRaceString(Report.getReportVal(0)) + "\n"
+                            + "Gender: " + Report.getGenderString(Report.getReportVal(1)) + "\n"
+                            + "Hispanic: " + Report.getHispanicString(Report.getReportVal(2)) + "\n"
+                            + "Reason: " + Report.getReasonString(Report.getReportVal(3)) + "\n"
+                            + "Disposition: "+ Report.getDispString(Report.getReportVal(4)));
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
