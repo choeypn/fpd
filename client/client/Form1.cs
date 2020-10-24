@@ -40,11 +40,17 @@ namespace @finally
             Button click = (Button)sender;
             //click.Text = "Submitted";
             click.Enabled = false;
+
+            Report.setDateString(DateTime.Now.ToShortDateString());
+            Report.setTimeString(DateTime.Now.ToShortTimeString());
+
             Console.WriteLine(Report.getRaceString(Report.getReportVal(0)));
             Console.WriteLine(Report.getGenderString(Report.getReportVal(1)));
             Console.WriteLine(Report.getHispanicString(Report.getReportVal(2)));
             Console.WriteLine(Report.getReasonString(Report.getReportVal(3)));
             Console.WriteLine(Report.getDispString(Report.getReportVal(4)));
+            Console.WriteLine(Report.getTimeString());
+            Console.WriteLine(Report.getDateString());
             Console.WriteLine("Submitted");
         }
 
