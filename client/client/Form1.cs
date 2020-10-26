@@ -16,6 +16,7 @@ namespace @finally
         public Form1()
         {
             InitializeComponent();
+            errorButton.Visible = false;
             Report report = new Report();
             for(int i = 0; i < 5; i++)
             {
@@ -40,6 +41,16 @@ namespace @finally
         {
             Button click = (Button)sender;
             //click.Text = "Submitted";
+            for (int i = 0; i < 5; i++)
+            {
+                if (Report.getReportVal(i) == -1)
+                {
+
+                    errorButton.Visible = true;
+                    return;
+                }
+            }
+            errorButton.Visible = false;
             click.Enabled = false;
 
             Report.setDateString(DateTime.Now.ToShortDateString());
@@ -357,5 +368,9 @@ namespace @finally
             Report.setReportVal(0, 4);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

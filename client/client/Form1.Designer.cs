@@ -61,6 +61,7 @@
             this.raceButtonWhite = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.errorButton = new System.Windows.Forms.Button();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -450,11 +451,24 @@
             this.textBox7.Text = "Time";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // errorButton
+            // 
+            this.errorButton.BackColor = System.Drawing.Color.Red;
+            this.errorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorButton.Location = new System.Drawing.Point(625, 158);
+            this.errorButton.Name = "errorButton";
+            this.errorButton.Size = new System.Drawing.Size(102, 56);
+            this.errorButton.TabIndex = 19;
+            this.errorButton.Text = "MISSING FIELD(S)";
+            this.errorButton.UseVisualStyleBackColor = false;
+            this.errorButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 587);
+            this.Controls.Add(this.errorButton);
             this.Controls.Add(this.raceButtonWhite);
             this.Controls.Add(this.dispositionButtonArrest);
             this.Controls.Add(this.raceButtonOther);
@@ -529,6 +543,7 @@
         private System.Windows.Forms.Button raceButtonWhite;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button errorButton;
     }
 }
 
