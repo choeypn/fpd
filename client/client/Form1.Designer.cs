@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DateTimePicker dateTimePicker1;
-            System.Windows.Forms.DateTimePicker dateTimePicker2;
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
@@ -59,44 +57,16 @@
             this.raceButtonNativeAmerican = new System.Windows.Forms.Button();
             this.raceButtonOther = new System.Windows.Forms.Button();
             this.raceButtonWhite = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.errorButton = new System.Windows.Forms.Button();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateTimePicker1.Location = new System.Drawing.Point(126, 41);
-            dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dateTimePicker1.Size = new System.Drawing.Size(212, 20);
-            dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.UseWaitCursor = true;
-            dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new System.Drawing.Point(461, 41);
-            dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dateTimePicker2.ShowUpDown = true;
-            dateTimePicker2.Size = new System.Drawing.Size(106, 20);
-            dateTimePicker2.TabIndex = 3;
-            dateTimePicker2.UseWaitCursor = true;
-            dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(70, 124);
+            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox1.Location = new System.Drawing.Point(75, 66);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(95, 20);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Race";
@@ -106,7 +76,7 @@
             // 
             this.buttonSubmit.BackColor = System.Drawing.Color.LightGray;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonSubmit.Location = new System.Drawing.Point(625, 249);
+            this.buttonSubmit.Location = new System.Drawing.Point(630, 191);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(102, 45);
             this.buttonSubmit.TabIndex = 6;
@@ -118,7 +88,7 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonClear.Location = new System.Drawing.Point(625, 341);
+            this.buttonClear.Location = new System.Drawing.Point(630, 283);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(102, 45);
             this.buttonClear.TabIndex = 14;
@@ -129,8 +99,10 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 124);
+            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox2.Location = new System.Drawing.Point(208, 66);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(96, 20);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Gender";
@@ -139,8 +111,10 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(338, 124);
+            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox3.Location = new System.Drawing.Point(343, 66);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(94, 20);
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = "Reason";
@@ -149,8 +123,10 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(472, 124);
+            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox4.Location = new System.Drawing.Point(477, 66);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(130, 20);
             this.textBox4.TabIndex = 5;
             this.textBox4.Text = "Disposition";
@@ -160,7 +136,7 @@
             // 
             this.genderButtonMale.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.genderButtonMale.Location = new System.Drawing.Point(212, 159);
+            this.genderButtonMale.Location = new System.Drawing.Point(217, 101);
             this.genderButtonMale.Name = "genderButtonMale";
             this.genderButtonMale.Size = new System.Drawing.Size(73, 34);
             this.genderButtonMale.TabIndex = 18;
@@ -172,7 +148,7 @@
             // 
             this.genderButtonFemale.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.genderButtonFemale.Location = new System.Drawing.Point(212, 210);
+            this.genderButtonFemale.Location = new System.Drawing.Point(217, 152);
             this.genderButtonFemale.Name = "genderButtonFemale";
             this.genderButtonFemale.Size = new System.Drawing.Size(73, 34);
             this.genderButtonFemale.TabIndex = 18;
@@ -184,7 +160,7 @@
             // 
             this.genderButtonUnidentified.BackColor = System.Drawing.Color.LightGray;
             this.genderButtonUnidentified.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.genderButtonUnidentified.Location = new System.Drawing.Point(212, 260);
+            this.genderButtonUnidentified.Location = new System.Drawing.Point(217, 202);
             this.genderButtonUnidentified.Name = "genderButtonUnidentified";
             this.genderButtonUnidentified.Size = new System.Drawing.Size(73, 34);
             this.genderButtonUnidentified.TabIndex = 18;
@@ -195,8 +171,10 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(203, 326);
+            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox5.Location = new System.Drawing.Point(208, 268);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(96, 20);
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Hispanic";
@@ -206,7 +184,7 @@
             // 
             this.hispanicButtonYes.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.hispanicButtonYes.Location = new System.Drawing.Point(212, 352);
+            this.hispanicButtonYes.Location = new System.Drawing.Point(217, 294);
             this.hispanicButtonYes.Name = "hispanicButtonYes";
             this.hispanicButtonYes.Size = new System.Drawing.Size(73, 34);
             this.hispanicButtonYes.TabIndex = 18;
@@ -218,7 +196,7 @@
             // 
             this.hispanicButtonNo.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.hispanicButtonNo.Location = new System.Drawing.Point(212, 403);
+            this.hispanicButtonNo.Location = new System.Drawing.Point(217, 345);
             this.hispanicButtonNo.Name = "hispanicButtonNo";
             this.hispanicButtonNo.Size = new System.Drawing.Size(73, 34);
             this.hispanicButtonNo.TabIndex = 18;
@@ -230,7 +208,7 @@
             // 
             this.hispanicButtonUnidentified.BackColor = System.Drawing.Color.LightGray;
             this.hispanicButtonUnidentified.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.hispanicButtonUnidentified.Location = new System.Drawing.Point(212, 453);
+            this.hispanicButtonUnidentified.Location = new System.Drawing.Point(217, 395);
             this.hispanicButtonUnidentified.Name = "hispanicButtonUnidentified";
             this.hispanicButtonUnidentified.Size = new System.Drawing.Size(73, 34);
             this.hispanicButtonUnidentified.TabIndex = 18;
@@ -242,7 +220,7 @@
             // 
             this.reasonButtonSocial.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonSocial.Location = new System.Drawing.Point(348, 159);
+            this.reasonButtonSocial.Location = new System.Drawing.Point(353, 101);
             this.reasonButtonSocial.Name = "reasonButtonSocial";
             this.reasonButtonSocial.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonSocial.TabIndex = 18;
@@ -254,7 +232,7 @@
             // 
             this.reasonButtonTerry.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonTerry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonTerry.Location = new System.Drawing.Point(348, 210);
+            this.reasonButtonTerry.Location = new System.Drawing.Point(353, 152);
             this.reasonButtonTerry.Name = "reasonButtonTerry";
             this.reasonButtonTerry.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonTerry.TabIndex = 18;
@@ -266,7 +244,7 @@
             // 
             this.reasonButtonVehicleEquipment.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonVehicleEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonVehicleEquipment.Location = new System.Drawing.Point(348, 260);
+            this.reasonButtonVehicleEquipment.Location = new System.Drawing.Point(353, 202);
             this.reasonButtonVehicleEquipment.Name = "reasonButtonVehicleEquipment";
             this.reasonButtonVehicleEquipment.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonVehicleEquipment.TabIndex = 18;
@@ -278,7 +256,7 @@
             // 
             this.reasonButtonSpeed.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonSpeed.Location = new System.Drawing.Point(348, 312);
+            this.reasonButtonSpeed.Location = new System.Drawing.Point(353, 254);
             this.reasonButtonSpeed.Name = "reasonButtonSpeed";
             this.reasonButtonSpeed.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonSpeed.TabIndex = 18;
@@ -290,7 +268,7 @@
             // 
             this.reasonButtonDUI.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonDUI.Location = new System.Drawing.Point(348, 363);
+            this.reasonButtonDUI.Location = new System.Drawing.Point(353, 305);
             this.reasonButtonDUI.Name = "reasonButtonDUI";
             this.reasonButtonDUI.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonDUI.TabIndex = 18;
@@ -302,7 +280,7 @@
             // 
             this.reasonButtonOther.BackColor = System.Drawing.Color.LightGray;
             this.reasonButtonOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonButtonOther.Location = new System.Drawing.Point(348, 413);
+            this.reasonButtonOther.Location = new System.Drawing.Point(353, 355);
             this.reasonButtonOther.Name = "reasonButtonOther";
             this.reasonButtonOther.Size = new System.Drawing.Size(73, 34);
             this.reasonButtonOther.TabIndex = 18;
@@ -314,7 +292,7 @@
             // 
             this.dispositionButtonNoAction.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonNoAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dispositionButtonNoAction.Location = new System.Drawing.Point(499, 150);
+            this.dispositionButtonNoAction.Location = new System.Drawing.Point(504, 92);
             this.dispositionButtonNoAction.Name = "dispositionButtonNoAction";
             this.dispositionButtonNoAction.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonNoAction.TabIndex = 18;
@@ -326,7 +304,7 @@
             // 
             this.dispositionButtonVerbalWarning.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonVerbalWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dispositionButtonVerbalWarning.Location = new System.Drawing.Point(499, 230);
+            this.dispositionButtonVerbalWarning.Location = new System.Drawing.Point(504, 172);
             this.dispositionButtonVerbalWarning.Name = "dispositionButtonVerbalWarning";
             this.dispositionButtonVerbalWarning.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonVerbalWarning.TabIndex = 18;
@@ -338,7 +316,7 @@
             // 
             this.dispositionButtonInfraction.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonInfraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dispositionButtonInfraction.Location = new System.Drawing.Point(499, 312);
+            this.dispositionButtonInfraction.Location = new System.Drawing.Point(504, 254);
             this.dispositionButtonInfraction.Name = "dispositionButtonInfraction";
             this.dispositionButtonInfraction.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonInfraction.TabIndex = 18;
@@ -350,7 +328,7 @@
             // 
             this.dispositionButtonCitation.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonCitation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dispositionButtonCitation.Location = new System.Drawing.Point(499, 392);
+            this.dispositionButtonCitation.Location = new System.Drawing.Point(504, 334);
             this.dispositionButtonCitation.Name = "dispositionButtonCitation";
             this.dispositionButtonCitation.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonCitation.TabIndex = 18;
@@ -362,7 +340,7 @@
             // 
             this.dispositionButtonArrest.BackColor = System.Drawing.Color.LightGray;
             this.dispositionButtonArrest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dispositionButtonArrest.Location = new System.Drawing.Point(499, 471);
+            this.dispositionButtonArrest.Location = new System.Drawing.Point(504, 413);
             this.dispositionButtonArrest.Name = "dispositionButtonArrest";
             this.dispositionButtonArrest.Size = new System.Drawing.Size(71, 64);
             this.dispositionButtonArrest.TabIndex = 18;
@@ -374,7 +352,7 @@
             // 
             this.raceButtonAsian.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonAsian.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.raceButtonAsian.Location = new System.Drawing.Point(83, 150);
+            this.raceButtonAsian.Location = new System.Drawing.Point(88, 92);
             this.raceButtonAsian.Name = "raceButtonAsian";
             this.raceButtonAsian.Size = new System.Drawing.Size(71, 64);
             this.raceButtonAsian.TabIndex = 18;
@@ -386,7 +364,7 @@
             // 
             this.raceButtonBlack.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonBlack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.raceButtonBlack.Location = new System.Drawing.Point(83, 230);
+            this.raceButtonBlack.Location = new System.Drawing.Point(88, 172);
             this.raceButtonBlack.Name = "raceButtonBlack";
             this.raceButtonBlack.Size = new System.Drawing.Size(71, 64);
             this.raceButtonBlack.TabIndex = 18;
@@ -399,7 +377,7 @@
             this.raceButtonNativeAmerican.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonNativeAmerican.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.raceButtonNativeAmerican.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.raceButtonNativeAmerican.Location = new System.Drawing.Point(83, 312);
+            this.raceButtonNativeAmerican.Location = new System.Drawing.Point(88, 254);
             this.raceButtonNativeAmerican.Name = "raceButtonNativeAmerican";
             this.raceButtonNativeAmerican.Size = new System.Drawing.Size(71, 64);
             this.raceButtonNativeAmerican.TabIndex = 18;
@@ -411,7 +389,7 @@
             // 
             this.raceButtonOther.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.raceButtonOther.Location = new System.Drawing.Point(83, 392);
+            this.raceButtonOther.Location = new System.Drawing.Point(88, 334);
             this.raceButtonOther.Name = "raceButtonOther";
             this.raceButtonOther.Size = new System.Drawing.Size(71, 64);
             this.raceButtonOther.TabIndex = 18;
@@ -423,7 +401,7 @@
             // 
             this.raceButtonWhite.BackColor = System.Drawing.Color.LightGray;
             this.raceButtonWhite.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.raceButtonWhite.Location = new System.Drawing.Point(83, 471);
+            this.raceButtonWhite.Location = new System.Drawing.Point(88, 413);
             this.raceButtonWhite.Name = "raceButtonWhite";
             this.raceButtonWhite.Size = new System.Drawing.Size(71, 64);
             this.raceButtonWhite.TabIndex = 18;
@@ -431,31 +409,11 @@
             this.raceButtonWhite.UseVisualStyleBackColor = false;
             this.raceButtonWhite.Click += new System.EventHandler(this.buttonRaceWhite_Click);
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(65, 41);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(65, 20);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Date";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(397, 41);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(65, 20);
-            this.textBox7.TabIndex = 5;
-            this.textBox7.Text = "Time";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // errorButton
             // 
             this.errorButton.BackColor = System.Drawing.Color.Red;
             this.errorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorButton.Location = new System.Drawing.Point(625, 158);
+            this.errorButton.Location = new System.Drawing.Point(630, 100);
             this.errorButton.Name = "errorButton";
             this.errorButton.Size = new System.Drawing.Size(102, 56);
             this.errorButton.TabIndex = 19;
@@ -497,11 +455,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(dateTimePicker2);
-            this.Controls.Add(dateTimePicker1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -541,8 +495,6 @@
         private System.Windows.Forms.Button raceButtonNativeAmerican;
         private System.Windows.Forms.Button raceButtonOther;
         private System.Windows.Forms.Button raceButtonWhite;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button errorButton;
     }
 }
