@@ -436,7 +436,7 @@
             this.outputText.TabIndex = 20;
             this.outputText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.outputText.Visible = false;
-            this.outputText.TextChanged += new System.EventHandler(this.outputText_TextChanged);
+            //this.outputText.TextChanged += new System.EventHandler(this.outputText_TextChanged);
             // 
             // Form1
             // 
