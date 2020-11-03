@@ -65,6 +65,8 @@ namespace @finally
             Console.WriteLine(Report.getDateString());
             Console.WriteLine("Submitted");
             saveToText();
+
+            buttonClear_Click(sender, e);
         }
 
 
