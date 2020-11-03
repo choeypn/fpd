@@ -64,8 +64,24 @@ namespace @finally
             saveToText();
 
             buttonClear_Click(sender, e);
+
+            showOutputText();
         }
 
+        //shows output text box
+        //displays submission date and time in 5 seconds
+        private void showOutputText()
+        {
+            //string[] output = { "FORM SUBMITTED AT ", Report.getTimeString(),Report.getDateString()};
+            this.outputText.Text = "FORM SUBMITTED AT " + Report.getTimeString() + " " + Report.getDateString();
+            this.outputText.Visible = true;
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer
+            {
+                Interval = 5000
+            };
+            timer.Tick += (source, e) => { this.outputText.Visible = false; timer.Stop(); };
+            timer.Start();
+        }
 
         /* Sending to server format
     sw.Write(Report.getDateString() + "&"
@@ -370,6 +386,21 @@ namespace @finally
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outputText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

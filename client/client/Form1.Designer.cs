@@ -58,6 +58,7 @@
             this.raceButtonOther = new System.Windows.Forms.Button();
             this.raceButtonWhite = new System.Windows.Forms.Button();
             this.errorButton = new System.Windows.Forms.Button();
+            this.outputText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -71,6 +72,7 @@
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Race";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonSubmit
             // 
@@ -107,6 +109,7 @@
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Gender";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -421,11 +424,26 @@
             this.errorButton.UseVisualStyleBackColor = false;
             this.errorButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // outputText
+            // 
+            this.outputText.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.outputText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputText.Location = new System.Drawing.Point(88, 12);
+            this.outputText.Name = "outputText";
+            this.outputText.ReadOnly = true;
+            this.outputText.Size = new System.Drawing.Size(644, 24);
+            this.outputText.TabIndex = 20;
+            this.outputText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.outputText.Visible = false;
+            this.outputText.TextChanged += new System.EventHandler(this.outputText_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 587);
+            this.Controls.Add(this.outputText);
             this.Controls.Add(this.errorButton);
             this.Controls.Add(this.raceButtonWhite);
             this.Controls.Add(this.dispositionButtonArrest);
@@ -496,6 +514,7 @@
         private System.Windows.Forms.Button raceButtonOther;
         private System.Windows.Forms.Button raceButtonWhite;
         private System.Windows.Forms.Button errorButton;
+        private System.Windows.Forms.TextBox outputText;
     }
 }
 
