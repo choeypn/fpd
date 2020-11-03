@@ -149,6 +149,7 @@ namespace @finally
             genderButtonMale.BackColor = Color.LightBlue;
             Report.setReportVal(1, 0);
         }
+
         private void buttonFemale_Click(object sender, EventArgs e)
         {
 
