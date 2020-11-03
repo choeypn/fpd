@@ -38,14 +38,45 @@ namespace @finally
         {
             Button click = (Button)sender;
             //click.Text = "Submitted";
+            int errorChecker = 0;
+            clearTextBox(sender, e); //clears all textbox backcolor to revisualize the missing data
             for (int i = 0; i < 5; i++)
             {
                 if (Report.getReportVal(i) == -1)
                 {
 
+                    if (i == 0)
+                    {
+                        textBox1.BackColor = Color.Red;
+                    }
+
+                    else if (i == 1)
+                    {
+                        textBox2.BackColor = Color.Red;
+                    }
+
+                    else if (i == 2)
+                    {
+                        textBox5.BackColor = Color.Red;
+                    }
+
+                    else if (i == 3)
+                    {
+                        textBox3.BackColor = Color.Red;
+                    }
+
+                    else
+                    {
+                        textBox4.BackColor = Color.Red;
+                    }
                     errorButton.Visible = true;
-                    return;
+                    errorChecker = -1;
                 }
+            }
+
+            if(errorChecker == -1)
+            {
+                return;
             }
             errorButton.Visible = false;
             click.Enabled = false;
@@ -162,11 +193,20 @@ namespace @finally
             raceButtonNativeAmerican.BackColor = Color.LightGray;
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
+            clearTextBox(sender, e);
 
             buttonSubmit.Enabled = true;
             Report.reportClear();
         }
 
+        private void clearTextBox(Object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+            textBox2.BackColor = Color.White;
+            textBox3.BackColor = Color.White;
+            textBox4.BackColor = Color.White;
+            textBox5.BackColor = Color.White;
+        }
 
         private void buttonMale_Click(object sender, EventArgs e)
         {
@@ -390,19 +430,5 @@ namespace @finally
 
         }
 
-        private void outputText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
