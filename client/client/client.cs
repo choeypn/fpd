@@ -169,6 +169,7 @@ namespace @finally
             return ret;
         }
 
+
         public static String getGenderString(int val)
         {
             String ret = "";
@@ -256,6 +257,14 @@ namespace @finally
 
             }
             return ret;
+        }
+
+        public static void reportClear()
+        {
+            for(int i = 0; i < reportVal.Length; i++)
+            {
+                reportVal[i] = -1;
+            }
         }
 
     }
