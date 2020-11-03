@@ -425,7 +425,7 @@ namespace @finally
             Report.setReportVal(0, 4);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void errorButton_Click(object sender, EventArgs e)
         {
 
         }

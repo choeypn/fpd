@@ -72,7 +72,7 @@
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Race";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // buttonSubmit
             // 
@@ -109,7 +109,7 @@
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Gender";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+
             // 
             // textBox3
             // 
@@ -422,7 +422,7 @@
             this.errorButton.TabIndex = 19;
             this.errorButton.Text = "MISSING FIELD(S)";
             this.errorButton.UseVisualStyleBackColor = false;
-            this.errorButton.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // outputText
             // 
@@ -436,7 +436,7 @@
             this.outputText.TabIndex = 20;
             this.outputText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.outputText.Visible = false;
-            //this.outputText.TextChanged += new System.EventHandler(this.outputText_TextChanged);
+
             // 
             // Form1
             // 
