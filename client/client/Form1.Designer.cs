@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxRace = new System.Windows.Forms.TextBox();
+            this.textBoxGender = new System.Windows.Forms.TextBox();
+            this.textBoxHispanic = new System.Windows.Forms.TextBox();
+            this.textBoxReason = new System.Windows.Forms.TextBox();
+            this.textBoxDisposition = new System.Windows.Forms.TextBox();
+
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.genderButtonMale = new System.Windows.Forms.Button();
             this.genderButtonFemale = new System.Windows.Forms.Button();
             this.genderButtonUnidentified = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.hispanicButtonYes = new System.Windows.Forms.Button();
             this.hispanicButtonNo = new System.Windows.Forms.Button();
             this.hispanicButtonUnidentified = new System.Windows.Forms.Button();
@@ -61,18 +62,65 @@
             this.outputText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxRace
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox1.Location = new System.Drawing.Point(75, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Race";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
+            this.textBoxRace.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRace.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxRace.Location = new System.Drawing.Point(75, 66);
+            this.textBoxRace.Name = "textBoxRace";
+            this.textBoxRace.ReadOnly = true;
+            this.textBoxRace.Size = new System.Drawing.Size(95, 20);
+            this.textBoxRace.TabIndex = 5;
+            this.textBoxRace.Text = "Race";
+            this.textBoxRace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxGender
+            // 
+            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGender.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxGender.Location = new System.Drawing.Point(208, 66);
+            this.textBoxGender.Name = "textBoxGender";
+            this.textBoxGender.ReadOnly = true;
+            this.textBoxGender.Size = new System.Drawing.Size(96, 20);
+            this.textBoxGender.TabIndex = 5;
+            this.textBoxGender.Text = "Gender";
+            this.textBoxGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxReason
+            // 
+            this.textBoxReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxReason.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxReason.Location = new System.Drawing.Point(343, 66);
+            this.textBoxReason.Name = "textBoxReason";
+            this.textBoxReason.ReadOnly = true;
+            this.textBoxReason.Size = new System.Drawing.Size(94, 20);
+            this.textBoxReason.TabIndex = 5;
+            this.textBoxReason.Text = "Reason";
+            this.textBoxReason.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxDisposition
+            // 
+            this.textBoxDisposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDisposition.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxDisposition.Location = new System.Drawing.Point(477, 66);
+            this.textBoxDisposition.Name = "textBoxDisposition";
+            this.textBoxDisposition.ReadOnly = true;
+            this.textBoxDisposition.Size = new System.Drawing.Size(130, 20);
+            this.textBoxDisposition.TabIndex = 5;
+            this.textBoxDisposition.Text = "Disposition";
+            this.textBoxDisposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxHispanic
+            // 
+            this.textBoxHispanic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHispanic.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxHispanic.Location = new System.Drawing.Point(208, 268);
+            this.textBoxHispanic.Name = "textBoxHispanic";
+            this.textBoxHispanic.ReadOnly = true;
+            this.textBoxHispanic.Size = new System.Drawing.Size(96, 20);
+            this.textBoxHispanic.TabIndex = 5;
+            this.textBoxHispanic.Text = "Hispanic";
+            this.textBoxHispanic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonSubmit
             // 
@@ -97,43 +145,6 @@
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox2.Location = new System.Drawing.Point(208, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(96, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Gender";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox3.Location = new System.Drawing.Point(343, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(94, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "Reason";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox4.Location = new System.Drawing.Point(477, 66);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Disposition";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // genderButtonMale
             // 
@@ -170,18 +181,7 @@
             this.genderButtonUnidentified.Text = "U";
             this.genderButtonUnidentified.UseVisualStyleBackColor = false;
             this.genderButtonUnidentified.Click += new System.EventHandler(this.buttonUnid_Click);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox5.Location = new System.Drawing.Point(208, 268);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(96, 20);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "Hispanic";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
             // 
             // hispanicButtonYes
             // 
@@ -469,11 +469,11 @@
             this.Controls.Add(this.dispositionButtonNoAction);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSubmit);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRace);
+            this.Controls.Add(this.textBoxGender);
+            this.Controls.Add(this.textBoxHispanic);
+            this.Controls.Add(this.textBoxReason);
+            this.Controls.Add(this.textBoxDisposition);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -484,16 +484,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxRace;
+        private System.Windows.Forms.TextBox textBoxGender;
+        private System.Windows.Forms.TextBox textBoxReason;
+        private System.Windows.Forms.TextBox textBoxDisposition;
+        private System.Windows.Forms.TextBox textBoxHispanic;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button genderButtonMale;
         private System.Windows.Forms.Button genderButtonFemale;
         private System.Windows.Forms.Button genderButtonUnidentified;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button hispanicButtonYes;
         private System.Windows.Forms.Button hispanicButtonNo;
         private System.Windows.Forms.Button hispanicButtonUnidentified;

@@ -47,27 +47,27 @@ namespace @finally
 
                     if (i == 0)
                     {
-                        textBox1.BackColor = Color.Red;
+                        textBoxRace.BackColor = Color.Red;
                     }
 
                     else if (i == 1)
                     {
-                        textBox2.BackColor = Color.Red;
+                        textBoxGender.BackColor = Color.Red;
                     }
 
                     else if (i == 2)
                     {
-                        textBox5.BackColor = Color.Red;
+                        textBoxHispanic.BackColor = Color.Red;
                     }
 
                     else if (i == 3)
                     {
-                        textBox3.BackColor = Color.Red;
+                        textBoxReason.BackColor = Color.Red;
                     }
 
                     else
                     {
-                        textBox4.BackColor = Color.Red;
+                        textBoxDisposition.BackColor = Color.Red;
                     }
                     errorButton.Visible = true;
                     errorChecker = -1;
@@ -201,11 +201,11 @@ namespace @finally
 
         private void clearTextBox(Object sender, EventArgs e)
         {
-            textBox1.BackColor = Color.White;
-            textBox2.BackColor = Color.White;
-            textBox3.BackColor = Color.White;
-            textBox4.BackColor = Color.White;
-            textBox5.BackColor = Color.White;
+            textBoxRace.BackColor = Color.White;
+            textBoxGender.BackColor = Color.White;
+            textBoxHispanic.BackColor = Color.White;
+            textBoxReason.BackColor = Color.White;
+            textBoxDisposition.BackColor = Color.White;
         }
 
         private void buttonMale_Click(object sender, EventArgs e)
@@ -423,11 +423,6 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightBlue;
             Report.setReportVal(0, 4);
-        }
-
-        private void errorButton_Click(object sender, EventArgs e)
-        {
-
         }
 
     }
