@@ -64,7 +64,6 @@ namespace @finally
             saveToText();
 
             buttonClear_Click(sender, e);
-            Report.reportClear();
         }
 
 
@@ -149,6 +148,7 @@ namespace @finally
             raceButtonWhite.BackColor = Color.LightGray;
 
             buttonSubmit.Enabled = true;
+            Report.reportClear();
         }
 
 
