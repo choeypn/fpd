@@ -78,7 +78,7 @@ namespace @finally
             {
                 return;
             }
-            errorButton.Visible = false;
+            
             click.Enabled = false;
 
             Report.setDateString(DateTime.Now.ToShortDateString());
@@ -194,8 +194,8 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
             clearTextBox(sender, e);
-
             buttonSubmit.Enabled = true;
+            errorButton.Visible = false;
             Report.reportClear();
         }
 
