@@ -18,10 +18,7 @@ namespace @finally
             InitializeComponent();
             errorButton.Visible = false;
             Report report = new Report();
-            for(int i = 0; i < 5; i++)
-            {
-                Report.setReportVal(i,-1);
-            }
+            Report.reportClear();
             
         }
 
@@ -67,6 +64,7 @@ namespace @finally
             saveToText();
 
             buttonClear_Click(sender, e);
+            Report.reportClear();
         }
 
 
