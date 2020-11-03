@@ -128,16 +128,18 @@ namespace @finally
             //string path = @"c:\temp\test.txt";
             int num = 0;
             string filename = "form"+num+".txt";
-            string[] path = { @"c:\temp", filename};
-            string fullpath = Path.Combine(path);
+
+            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
+
+            string[] path = { @"This PC\Documents\traffic_report\", filename};
+            string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"traffic_report",filename);
             if (File.Exists(fullpath))
             {
                 while (File.Exists(fullpath)) 
                 {
                     num++;
                     filename = "form"+num+".txt";
-                    path[1] = filename;
-                    fullpath = Path.Combine(path);
+                    fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
                 {
