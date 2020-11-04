@@ -125,24 +125,23 @@ namespace @finally
         */
         public static void saveToText()
         {
-            //string path = @"c:\temp\test.txt";
-            int num = 0;
-            string filename = "form"+num+".txt";
+            int num = 1;
+            string filename = Environment.UserName + "_form" + num + ".txt";
 
             Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
 
-            string[] path = { @"This PC\Documents\traffic_report\", filename};
             string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"traffic_report",filename);
             if (File.Exists(fullpath))
             {
                 while (File.Exists(fullpath)) 
                 {
                     num++;
-                    filename = "form"+num+".txt";
+                    filename = Environment.UserName + "_form" + num + ".txt";
                     fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
                 {
+                    
                     sw.Write(getReportString());
                 }
             }
@@ -153,6 +152,7 @@ namespace @finally
                     sw.Write(getReportString());
                 }
             }
+            
 
         }
 
