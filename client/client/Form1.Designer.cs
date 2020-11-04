@@ -33,7 +33,6 @@
             this.textBoxHispanic = new System.Windows.Forms.TextBox();
             this.textBoxReason = new System.Windows.Forms.TextBox();
             this.textBoxDisposition = new System.Windows.Forms.TextBox();
-
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.genderButtonMale = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@
             this.raceButtonWhite = new System.Windows.Forms.Button();
             this.errorButton = new System.Windows.Forms.Button();
             this.outputText = new System.Windows.Forms.TextBox();
+            this.uploadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxRace
@@ -86,6 +86,18 @@
             this.textBoxGender.Text = "Gender";
             this.textBoxGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // textBoxHispanic
+            // 
+            this.textBoxHispanic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHispanic.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBoxHispanic.Location = new System.Drawing.Point(208, 268);
+            this.textBoxHispanic.Name = "textBoxHispanic";
+            this.textBoxHispanic.ReadOnly = true;
+            this.textBoxHispanic.Size = new System.Drawing.Size(96, 20);
+            this.textBoxHispanic.TabIndex = 5;
+            this.textBoxHispanic.Text = "Hispanic";
+            this.textBoxHispanic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // textBoxReason
             // 
             this.textBoxReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,18 +121,6 @@
             this.textBoxDisposition.TabIndex = 5;
             this.textBoxDisposition.Text = "Disposition";
             this.textBoxDisposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxHispanic
-            // 
-            this.textBoxHispanic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHispanic.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBoxHispanic.Location = new System.Drawing.Point(208, 268);
-            this.textBoxHispanic.Name = "textBoxHispanic";
-            this.textBoxHispanic.ReadOnly = true;
-            this.textBoxHispanic.Size = new System.Drawing.Size(96, 20);
-            this.textBoxHispanic.TabIndex = 5;
-            this.textBoxHispanic.Text = "Hispanic";
-            this.textBoxHispanic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonSubmit
             // 
@@ -181,7 +181,6 @@
             this.genderButtonUnidentified.Text = "U";
             this.genderButtonUnidentified.UseVisualStyleBackColor = false;
             this.genderButtonUnidentified.Click += new System.EventHandler(this.buttonUnid_Click);
-
             // 
             // hispanicButtonYes
             // 
@@ -422,7 +421,6 @@
             this.errorButton.TabIndex = 19;
             this.errorButton.Text = "MISSING FIELD(S)";
             this.errorButton.UseVisualStyleBackColor = false;
-
             // 
             // outputText
             // 
@@ -436,13 +434,25 @@
             this.outputText.TabIndex = 20;
             this.outputText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.outputText.Visible = false;
-
+            // 
+            // uploadButton
+            // 
+            this.uploadButton.BackColor = System.Drawing.Color.LightGray;
+            this.uploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadButton.Location = new System.Drawing.Point(696, 454);
+            this.uploadButton.Name = "button1";
+            this.uploadButton.Size = new System.Drawing.Size(113, 75);
+            this.uploadButton.TabIndex = 21;
+            this.uploadButton.Text = "Upload form(s)";
+            this.uploadButton.UseVisualStyleBackColor = false;
+            this.uploadButton.Click += new System.EventHandler(this.buttonUpload_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 587);
+            this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.outputText);
             this.Controls.Add(this.errorButton);
             this.Controls.Add(this.raceButtonWhite);
@@ -515,6 +525,7 @@
         private System.Windows.Forms.Button raceButtonWhite;
         private System.Windows.Forms.Button errorButton;
         private System.Windows.Forms.TextBox outputText;
+        private System.Windows.Forms.Button uploadButton;
     }
 }
 

@@ -34,6 +34,13 @@ namespace @finally
             timePicker.ShowUpDown = true;
         }
 
+        //scp files in traffic_report folder to destination
+        //TODO : I don't know
+        private void buttonUpload_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             Button click = (Button)sender;
