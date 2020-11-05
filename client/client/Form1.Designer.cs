@@ -57,7 +57,7 @@
             this.raceButtonNativeAmerican = new System.Windows.Forms.Button();
             this.raceButtonOther = new System.Windows.Forms.Button();
             this.raceButtonWhite = new System.Windows.Forms.Button();
-            this.errorButton = new System.Windows.Forms.Button();
+
             this.outputText = new System.Windows.Forms.TextBox();
             this.uploadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -410,17 +410,7 @@
             this.raceButtonWhite.Text = "W";
             this.raceButtonWhite.UseVisualStyleBackColor = false;
             this.raceButtonWhite.Click += new System.EventHandler(this.buttonRaceWhite_Click);
-            // 
-            // errorButton
-            // 
-            this.errorButton.BackColor = System.Drawing.Color.Red;
-            this.errorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorButton.Location = new System.Drawing.Point(630, 100);
-            this.errorButton.Name = "errorButton";
-            this.errorButton.Size = new System.Drawing.Size(102, 56);
-            this.errorButton.TabIndex = 19;
-            this.errorButton.Text = "MISSING FIELD(S)";
-            this.errorButton.UseVisualStyleBackColor = false;
+
             // 
             // outputText
             // 
@@ -454,7 +444,7 @@
             this.ClientSize = new System.Drawing.Size(820, 587);
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.outputText);
-            this.Controls.Add(this.errorButton);
+
             this.Controls.Add(this.raceButtonWhite);
             this.Controls.Add(this.dispositionButtonArrest);
             this.Controls.Add(this.raceButtonOther);
@@ -523,7 +513,7 @@
         private System.Windows.Forms.Button raceButtonNativeAmerican;
         private System.Windows.Forms.Button raceButtonOther;
         private System.Windows.Forms.Button raceButtonWhite;
-        private System.Windows.Forms.Button errorButton;
+
         private System.Windows.Forms.TextBox outputText;
         private System.Windows.Forms.Button uploadButton;
     }
