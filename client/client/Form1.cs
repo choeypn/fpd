@@ -117,7 +117,7 @@ namespace @finally
         public static void saveToText()
         {
             int num = 1;
-            string filename = Environment.UserName + "_form" + num + ".txt";
+            string filename = Environment.UserName + "_form" + num + ".csv";
 
             Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
 
@@ -127,7 +127,7 @@ namespace @finally
                 while (File.Exists(fullpath)) 
                 {
                     num++;
-                    filename = Environment.UserName + "_form" + num + ".txt";
+                    filename = Environment.UserName + "_form" + num + ".csv";
                     fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
@@ -149,13 +149,15 @@ namespace @finally
 
         public static string getReportString()
         {
-            return (Report.getDateString() + "\n"
-                            + Report.getTimeString() + "\n"
-                            + "Race: " + Report.getRaceString(Report.getReportVal(0)) + "\n"
-                            + "Gender: " + Report.getGenderString(Report.getReportVal(1)) + "\n"
-                            + "Hispanic: " + Report.getHispanicString(Report.getReportVal(2)) + "\n"
-                            + "Reason: " + Report.getReasonString(Report.getReportVal(3)) + "\n"
-                            + "Disposition: "+ Report.getDispString(Report.getReportVal(4)));
+            return ("Date" + "," + "Time" + "," + "Race" + "," + "Gender" + "," 
+                            + "Hispanic" + "," + "Reason" + "," + "Disposition" + "\n"
+                            + "\"" + Report.getDateString() + "\"," 
+                            + "\"" + Report.getTimeString() + "\","
+                            + "\"" + Report.getRaceString(Report.getReportVal(0)) + "\","
+                            + "\"" + Report.getGenderString(Report.getReportVal(1)) + "\","
+                            + "\"" + Report.getHispanicString(Report.getReportVal(2)) + "\","
+                            + "\"" + Report.getReasonString(Report.getReportVal(3)) + "\","
+                            + "\"" + Report.getDispString(Report.getReportVal(4)) + "\"");
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
