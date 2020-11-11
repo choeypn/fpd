@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Renci.SshNet;
+using Renci.SshNet.Sftp;
 
 namespace @finally
 {
@@ -31,6 +34,48 @@ namespace @finally
         private void buttonUpload_Click(object sender, EventArgs e)
         {
 
+            DirectoryInfo d = new DirectoryInfo(@"C:/Users/natth/Documents/traffic_report/");//Assuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*.csv"); //Getting Text files
+            try
+            {
+                Renci.SshNet.ConnectionInfo conn;
+                Console.WriteLine("Attempting to establish connection . . . ");
+                using (var stream = new FileStream("C:/Users/natth/.ssh/id_rsa", FileMode.Open, FileAccess.Read))
+                {
+                    var file = new PrivateKeyFile(stream);
+                    var authMethod = new PrivateKeyAuthenticationMethod("choeypn", file);
+
+                    conn = new Renci.SshNet.ConnectionInfo("linux-02.cs.wwu.edu", 922, "choeypn", authMethod);
+                }
+                Console.WriteLine("Connection established");
+                var client = new SftpClient(conn);
+                client.Connect();
+                foreach (FileInfo file in Files)
+                {
+                    if (client.IsConnected)
+                    {
+
+                        var fileStream = new FileStream("C:/Users/natth/Documents/traffic_report/"+file.Name, FileMode.Open);
+                        if (fileStream != null)
+                        {
+                            client.UploadFile(fileStream, "/home/choeypn/traffic_report/" + file.Name, null);
+                        }
+                    }
+                }
+                client.Disconnect();
+                client.Dispose();
+                Console.WriteLine("File(s) uploaded");
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Transaction error :" + ex.ToString());
+            }
+            showUploadText();
+        }
+
+        private void showUploadText()
+        {
+            this.uploadText.Visible = true;
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -191,6 +236,7 @@ namespace @finally
             clearTextBox(sender, e);
             buttonSubmit.Enabled = true;
             this.outputText.Visible = false;
+            this.uploadText.Visible = false;
             Report.reportClear();
         }
 
@@ -464,6 +510,5 @@ namespace @finally
             Report.setReportVal(0, 4);
             clearTextBox(0);
         }
-
     }
 }
