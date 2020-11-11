@@ -109,9 +109,30 @@ namespace @finally
         String gender;
         String reason;
         String disposition;
-        String date;
 
+        static String date;
+        static String time;
         static int[] reportVal = new int[5];
+
+        public static String getDateString()
+        {
+            return date;
+        }
+
+        public static void setDateString(String val)
+        {
+            date = val;
+        }
+
+        public static String getTimeString()
+        {
+            return time;
+        }
+
+        public static void setTimeString(String val)
+        {
+            time = val;
+        }
 
         public static int getReportVal(int idx)
         {
@@ -147,6 +168,7 @@ namespace @finally
             }
             return ret;
         }
+
 
         public static String getGenderString(int val)
         {
@@ -235,6 +257,14 @@ namespace @finally
 
             }
             return ret;
+        }
+
+        public static void reportClear()
+        {
+            for(int i = 0; i < reportVal.Length; i++)
+            {
+                reportVal[i] = -1;
+            }
         }
 
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,7 @@ namespace @finally
         {
             InitializeComponent();
             Report report = new Report();
-            for(int i = 0; i < 5; i++)
-            {
-                Report.setReportVal(i,-1);
-            }
+            Report.reportClear();
             
         }
 
@@ -28,24 +26,138 @@ namespace @finally
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        //scp files in traffic_report folder to destination
+        //TODO : I don't know
+        private void buttonUpload_Click(object sender, EventArgs e)
         {
-            DateTimePicker timePicker = new DateTimePicker();
-            timePicker.Format = DateTimePickerFormat.Time;
-            timePicker.ShowUpDown = true;
+
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             Button click = (Button)sender;
             //click.Text = "Submitted";
+            int errorChecker = 0;
+            clearTextBox(sender, e); //clears all textbox backcolor to revisualize the missing data
+            for (int i = 0; i < 5; i++)
+            {
+                if (Report.getReportVal(i) == -1)
+                {
+
+                    if (i == 0)
+                    {
+                        textBoxRace.BackColor = Color.Red;
+                    }
+
+                    else if (i == 1)
+                    {
+                        textBoxGender.BackColor = Color.Red;
+                    }
+
+                    else if (i == 2)
+                    {
+                        textBoxHispanic.BackColor = Color.Red;
+                    }
+
+                    else if (i == 3)
+                    {
+                        textBoxReason.BackColor = Color.Red;
+                    }
+
+                    else
+                    {
+                        textBoxDisposition.BackColor = Color.Red;
+                    }
+                    errorChecker = -1;
+                }
+            }
+
+            if(errorChecker == -1)
+            {
+                return;
+            }
+            
             click.Enabled = false;
+
+            Report.setDateString(DateTime.Now.ToShortDateString());
+            Report.setTimeString(DateTime.Now.ToShortTimeString());
+
             Console.WriteLine(Report.getRaceString(Report.getReportVal(0)));
             Console.WriteLine(Report.getGenderString(Report.getReportVal(1)));
             Console.WriteLine(Report.getHispanicString(Report.getReportVal(2)));
             Console.WriteLine(Report.getReasonString(Report.getReportVal(3)));
             Console.WriteLine(Report.getDispString(Report.getReportVal(4)));
+            Console.WriteLine(Report.getTimeString());
+            Console.WriteLine(Report.getDateString());
             Console.WriteLine("Submitted");
+            saveToText();
+
+            buttonClear_Click(sender, e);
+            showOutputText();
+        }
+
+        //shows output text box
+        //displays submission date and time in 5 seconds
+        private void showOutputText()
+        {
+            //string[] output = { "FORM SUBMITTED AT ", Report.getTimeString(),Report.getDateString()};
+            this.outputText.Text = "FORM LAST SUBMITTED AT " + Report.getTimeString() + " " + Report.getDateString();
+            this.outputText.Visible = true;
+        }
+
+        /* Sending to server format
+    sw.Write(Report.getDateString() + "&"
+    + Report.getTimeString() + "&"
+    + Report.getRaceString(Report.getReportVal(0)) + "&"
+    + Report.getGenderString(Report.getReportVal(1)) + "&"
+    + Report.getHispanicString(Report.getReportVal(2)) + "&"
+    + Report.getReasonString(Report.getReportVal(3)) + "&"
+    + Report.getDispString(Report.getReportVal(4)));
+        */
+        public static void saveToText()
+        {
+            int num = 1;
+            string filename = Environment.UserName + "_form" + num + ".csv";
+
+            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
+
+            string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"traffic_report",filename);
+            if (File.Exists(fullpath))
+            {
+                while (File.Exists(fullpath)) 
+                {
+                    num++;
+                    filename = Environment.UserName + "_form" + num + ".csv";
+                    fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
+                }
+                using (StreamWriter sw = File.CreateText(fullpath))
+                {
+                    
+                    sw.Write(getReportString());
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(fullpath))
+                {
+                    sw.Write(getReportString());
+                }
+            }
+            
+
+        }
+
+        public static string getReportString()
+        {
+            return ("Date" + "," + "Time" + "," + "Race" + "," + "Gender" + "," 
+                            + "Hispanic" + "," + "Reason" + "," + "Disposition" + "\n"
+                            + "\"" + Report.getDateString() + "\"," 
+                            + "\"" + Report.getTimeString() + "\","
+                            + "\"" + Report.getRaceString(Report.getReportVal(0)) + "\","
+                            + "\"" + Report.getGenderString(Report.getReportVal(1)) + "\","
+                            + "\"" + Report.getHispanicString(Report.getReportVal(2)) + "\","
+                            + "\"" + Report.getReasonString(Report.getReportVal(3)) + "\","
+                            + "\"" + Report.getDispString(Report.getReportVal(4)) + "\"");
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -76,10 +188,43 @@ namespace @finally
             raceButtonNativeAmerican.BackColor = Color.LightGray;
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
-
+            clearTextBox(sender, e);
             buttonSubmit.Enabled = true;
+            this.outputText.Visible = false;
+            Report.reportClear();
         }
 
+        private void clearTextBox(int idx)
+        {
+            switch (idx)
+            {
+                case 0:
+                    textBoxRace.BackColor = Color.White;
+                    break;
+                case 1:
+                    textBoxGender.BackColor = Color.White;
+                    break;
+                case 2:
+                    textBoxHispanic.BackColor = Color.White;
+                    break;
+                case 3:
+                    textBoxReason.BackColor = Color.White;
+                    break;
+                case 4:
+                    textBoxDisposition.BackColor = Color.White;
+                    break;
+
+            }
+        }
+
+        private void clearTextBox(Object sender, EventArgs e)
+        {
+            textBoxRace.BackColor = Color.White;
+            textBoxGender.BackColor = Color.White;
+            textBoxHispanic.BackColor = Color.White;
+            textBoxReason.BackColor = Color.White;
+            textBoxDisposition.BackColor = Color.White;
+        }
 
         private void buttonMale_Click(object sender, EventArgs e)
         {
@@ -88,7 +233,9 @@ namespace @finally
             genderButtonUnidentified.BackColor = Color.LightGray;
             genderButtonMale.BackColor = Color.LightBlue;
             Report.setReportVal(1, 0);
+            clearTextBox(1);
         }
+
         private void buttonFemale_Click(object sender, EventArgs e)
         {
 
@@ -96,6 +243,7 @@ namespace @finally
             genderButtonUnidentified.BackColor = Color.LightGray;
             genderButtonFemale.BackColor = Color.LightBlue;
             Report.setReportVal(1, 1);
+            clearTextBox(1);
         }
 
 
@@ -105,6 +253,7 @@ namespace @finally
             genderButtonFemale.BackColor = Color.LightGray;
             genderButtonUnidentified.BackColor = Color.LightBlue;
             Report.setReportVal(1, 2);
+            clearTextBox(1);
         }
 
         private void buttonHispYes_Click(object sender, EventArgs e)
@@ -113,6 +262,7 @@ namespace @finally
             hispanicButtonNo.BackColor = Color.LightGray;
             hispanicButtonYes.BackColor = Color.LightBlue;
             Report.setReportVal(2, 0);
+            clearTextBox(2);
         }
 
         private void buttonHispNo_Click(object sender, EventArgs e)
@@ -121,6 +271,7 @@ namespace @finally
             hispanicButtonYes.BackColor = Color.LightGray;
             hispanicButtonNo.BackColor = Color.LightBlue;
             Report.setReportVal(2, 1);
+            clearTextBox(2);
         }
 
         private void buttonHispUnid_Click(object sender, EventArgs e)
@@ -129,6 +280,7 @@ namespace @finally
             hispanicButtonNo.BackColor = Color.LightGray;
             hispanicButtonUnidentified.BackColor = Color.LightBlue;
             Report.setReportVal(2, 2);
+            clearTextBox(2);
         }
 
         private void buttonReasonSocial_Click(object sender, EventArgs e)
@@ -140,6 +292,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightGray;
             reasonButtonOther.BackColor = Color.LightGray;
             Report.setReportVal(3, 0);
+            clearTextBox(3);
         }
 
         private void buttonReasonTerry_Click(object sender, EventArgs e)
@@ -151,6 +304,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightGray;
             reasonButtonOther.BackColor = Color.LightGray;
             Report.setReportVal(3, 1);
+            clearTextBox(3);
         }
 
         private void buttonReasonVehicle_Click(object sender, EventArgs e)
@@ -162,6 +316,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightGray;
             reasonButtonOther.BackColor = Color.LightGray;
             Report.setReportVal(3, 2);
+            clearTextBox(3);
         }
 
         private void buttonReasonSpeed_Click(object sender, EventArgs e)
@@ -173,6 +328,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightGray;
             reasonButtonOther.BackColor = Color.LightGray;
             Report.setReportVal(3, 3);
+            clearTextBox(3);
         }
 
         private void buttonReasonDUI_Click(object sender, EventArgs e)
@@ -184,6 +340,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightBlue;
             reasonButtonOther.BackColor = Color.LightGray;
             Report.setReportVal(3, 4);
+            clearTextBox(3);
         }
 
         private void buttonReasonOther_Click(object sender, EventArgs e)
@@ -195,6 +352,7 @@ namespace @finally
             reasonButtonDUI.BackColor = Color.LightGray;
             reasonButtonOther.BackColor = Color.LightBlue;
             Report.setReportVal(3, 5);
+            clearTextBox(3);
         }
 
         private void buttonDispNA_Click(object sender, EventArgs e)
@@ -205,6 +363,7 @@ namespace @finally
             dispositionButtonCitation.BackColor = Color.LightGray;
             dispositionButtonArrest.BackColor = Color.LightGray;
             Report.setReportVal(4, 0);
+            clearTextBox(4);
         }
 
         private void buttonDispVerbal_Click(object sender, EventArgs e)
@@ -215,6 +374,7 @@ namespace @finally
             dispositionButtonCitation.BackColor = Color.LightGray;
             dispositionButtonArrest.BackColor = Color.LightGray;
             Report.setReportVal(4, 1);
+            clearTextBox(4);
         }
 
         private void buttonDispInfraction_Click(object sender, EventArgs e)
@@ -225,6 +385,7 @@ namespace @finally
             dispositionButtonCitation.BackColor = Color.LightGray;
             dispositionButtonArrest.BackColor = Color.LightGray;
             Report.setReportVal(4, 2);
+            clearTextBox(4);
         }
 
         private void buttonDispCitation_Click(object sender, EventArgs e)
@@ -235,6 +396,7 @@ namespace @finally
             dispositionButtonCitation.BackColor = Color.LightBlue;
             dispositionButtonArrest.BackColor = Color.LightGray;
             Report.setReportVal(4, 3);
+            clearTextBox(4);
         }
 
         private void buttonDispArrest_Click(object sender, EventArgs e)
@@ -245,6 +407,7 @@ namespace @finally
             dispositionButtonCitation.BackColor = Color.LightGray;
             dispositionButtonArrest.BackColor = Color.LightBlue;
             Report.setReportVal(4, 4);
+            clearTextBox(4);
         }
 
         private void buttonRaceAsian_Click(object sender, EventArgs e)
@@ -255,6 +418,7 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
             Report.setReportVal(0, 0);
+            clearTextBox(0);
         }
 
         private void buttonRaceBlack_Click(object sender, EventArgs e)
@@ -265,6 +429,7 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
             Report.setReportVal(0, 1);
+            clearTextBox(0);
         }
 
         private void buttonRaceNativeAmerican_Click(object sender, EventArgs e)
@@ -275,6 +440,7 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightGray;
             Report.setReportVal(0, 2);
+            clearTextBox(0);
         }
 
         private void buttonRaceOther_Click(object sender, EventArgs e)
@@ -285,6 +451,7 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightBlue;
             raceButtonWhite.BackColor = Color.LightGray;
             Report.setReportVal(0, 3);
+            clearTextBox(0);
         }
 
         private void buttonRaceWhite_Click(object sender, EventArgs e)
@@ -295,6 +462,7 @@ namespace @finally
             raceButtonOther.BackColor = Color.LightGray;
             raceButtonWhite.BackColor = Color.LightBlue;
             Report.setReportVal(0, 4);
+            clearTextBox(0);
         }
 
     }
