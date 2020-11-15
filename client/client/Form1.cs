@@ -33,19 +33,22 @@ namespace @finally
         //TODO : I don't know
         private void buttonUpload_Click(object sender, EventArgs e)
         {
+            string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report");
+            string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".ssh","id_rsa");
+            string receiverUsername = "choeypn";
 
-            DirectoryInfo d = new DirectoryInfo(@"C:/Users/natth/Documents/traffic_report/");//Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.csv"); //Getting Text files
             try
             {
                 Renci.SshNet.ConnectionInfo conn;
                 Console.WriteLine("Attempting to establish connection . . . ");
-                using (var stream = new FileStream("C:/Users/natth/.ssh/id_rsa", FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(sshpath, FileMode.Open, FileAccess.Read))
                 {
                     var file = new PrivateKeyFile(stream);
-                    var authMethod = new PrivateKeyAuthenticationMethod("choeypn", file);
+                    var authMethod = new PrivateKeyAuthenticationMethod(receiverUsername, file);
 
-                    conn = new Renci.SshNet.ConnectionInfo("linux-02.cs.wwu.edu", 922, "choeypn", authMethod);
+                    conn = new Renci.SshNet.ConnectionInfo("linux-02.cs.wwu.edu", 922, receiverUsername, authMethod);
                 }
                 Console.WriteLine("Connection established");
                 var client = new SftpClient(conn);
@@ -55,10 +58,10 @@ namespace @finally
                     if (client.IsConnected)
                     {
 
-                        var fileStream = new FileStream("C:/Users/natth/Documents/traffic_report/"+file.Name, FileMode.Open);
+                        var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            client.UploadFile(fileStream, "/home/choeypn/traffic_report/" + file.Name, null);
+                            client.UploadFile(fileStream, "/home/"+receiverUsername+"/traffic_report/" + file.Name, null);
                         }
                     }
                 }
