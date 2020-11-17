@@ -61,7 +61,8 @@ namespace @finally
                         var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            client.UploadFile(fileStream, "/home/"+receiverUsername+"/traffic_report/" + file.Name, null);
+                            string receiverPath = "/home/" + receiverUsername + "/traffic_report/" + file.Name;
+                            client.UploadFile(fileStream, receiverPath, null);
                         }
                     }
                 }
@@ -165,7 +166,7 @@ namespace @finally
         public static void saveToText()
         {
             int num = 1;
-            string filename = Environment.UserName + "_form" + num + ".csv";
+            string filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
 
             Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
 
@@ -175,7 +176,7 @@ namespace @finally
                 while (File.Exists(fullpath)) 
                 {
                     num++;
-                    filename = Environment.UserName + "_form" + num + ".csv";
+                    filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
                     fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
