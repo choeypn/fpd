@@ -79,11 +79,6 @@ namespace @finally
             showUploadText();
         }
 
-        private void deleteSentForm(string filename)
-        {
-
-        }
-
         private void showUploadText()
         {
             this.uploadText.Visible = true;
