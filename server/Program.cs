@@ -16,7 +16,6 @@ namespace server
         {
 
         }
-    }
 
         static void recordReport(MySqlConnection connection, String date, String time, String race, String ethnicity, String gender, String reason, String disposition)
         {
