@@ -25,91 +25,48 @@ namespace @finally
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Form1());
-                TcpClient client = new TcpClient();
-                client.Connect("127.0.0.1", 9999);
-                String message = "hello";
-                // Translate the passed message into ASCII and store it as a Byte array.
-                Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
-                // Get a client stream for reading and writing.
-
-                NetworkStream stream = client.GetStream();
-
-                // read message from server
-                if (stream.CanRead)
-                {
-                    byte[] myReadBuffer = new byte[1024];
-                    StringBuilder myCompleteMessage = new StringBuilder();
-                    int numberOfBytesRead = 0;
-
-                    // Incoming message may be larger than the buffer size.
-                    do
-                    {
-                        numberOfBytesRead = stream.Read(myReadBuffer, 0, myReadBuffer.Length);
-
-                        myCompleteMessage.AppendFormat("{0}", Encoding.ASCII.GetString(myReadBuffer, 0, numberOfBytesRead));
-                    }
-                    while (stream.DataAvailable);
-
-                    // Print out the received message to the console.
-                    Console.WriteLine("You received the following message : " +
-                                                 myCompleteMessage);
-                }
-                else
-                {
-                    Console.WriteLine("Sorry.  You cannot read from this NetworkStream.");
-                }
-
-
-                // Send the message to the connected TcpServer. 
-                stream.Write(data, 0, data.Length); //This will be replaced with JSON Loop that goes through and sends all the reports to the server.
-
-                Console.WriteLine("Sent: {0}", message);
-
-                // Receive the TcpServer.response.
-
-                // Buffer to store the response bytes.
-                data = new Byte[256];
-
-                // String to store the response ASCII representation.
-                String responseData = String.Empty;
-
-                // Read the first batch of the TcpServer response bytes.
-                Int32 bytes = stream.Read(data, 0, data.Length);
-                responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
-                Console.WriteLine("Received: {0}", responseData);
-
-                // Close everything.
-                stream.Close();
-                client.Close();
-            }
-
-            catch (ArgumentNullException e)
+            }catch(Exception e)
             {
-                Console.WriteLine("ArgumentNullException: {0}", e);
+                Console.WriteLine(e);
             }
-            catch (SocketException e)
-            {
-                Console.WriteLine("SocketException: {0}", e);
-            }
-
-            Console.WriteLine("\n Press Enter to continue...");
-            Console.Read();
+                
         }
-        private static string prepareJson(Report report)
+    }
+
+    class adminInfo
+    {
+        static string receiverUsername;
+        static string server;
+        static int port;
+        static string receiverpath;
+        public adminInfo(string[] input)
         {
-            return JsonConvert.SerializeObject(report);
+            receiverUsername = input[0];
+            server = input[1];
+            port = Int32.Parse(input[2]);
+            receiverpath = input[3];
+        }
+        public string getReceiverUsername()
+        {
+            return receiverUsername;
+        }
+        public string getServer()
+        {
+            return server;
+        }
+        public int getPort()
+        {
+            return port;
+        }
+        public string getReceiverPath()
+        {
+            return receiverpath;
         }
     }
 
     class Report
     {
-        String race;
-        String hispanic;
-        String gender;
-        String reason;
-        String disposition;
-
         static String date;
         static String time;
         static int[] reportVal = new int[5];

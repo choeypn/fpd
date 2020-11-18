@@ -29,14 +29,24 @@ namespace @finally
 
         }
 
+        //NOTE: User must include a text file name "admin_info.txt" in "traffic_report" folder in MyDocuments.
+        //Use README for more information about text formatting. 
+        private string[] getAdminInfo()
+        {
+            string[] lines = System.IO.File.ReadAllLines(
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report","admin_info.txt"));
+            return lines;
+
+        }
+
         //scp files in traffic_report folder to destination
         //TODO : I don't know
         private void buttonUpload_Click(object sender, EventArgs e)
         {
             string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report");
             string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".ssh","id_rsa");
-            string receiverUsername = "choeypn";
-
+            string [] inputInfo = getAdminInfo();
+            adminInfo info = new adminInfo(inputInfo);
             DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
             FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
             try
@@ -46,23 +56,24 @@ namespace @finally
                 using (var stream = new FileStream(sshpath, FileMode.Open, FileAccess.Read))
                 {
                     var file = new PrivateKeyFile(stream);
-                    var authMethod = new PrivateKeyAuthenticationMethod(receiverUsername, file);
+                    var authMethod = new PrivateKeyAuthenticationMethod(info.getReceiverUsername(), file);
 
-                    conn = new Renci.SshNet.ConnectionInfo("linux-02.cs.wwu.edu", 922, receiverUsername, authMethod);
+                    conn = new Renci.SshNet.ConnectionInfo(info.getServer(), info.getPort(),
+                                                            info.getReceiverUsername(), authMethod);
                 }
                 Console.WriteLine("Connection established");
                 var client = new SftpClient(conn);
                 client.Connect();
                 foreach (FileInfo file in files)
                 {
-                    string receiverPath = "/home/" + receiverUsername + "/traffic_report/" + file.Name;
+                    string filereceivePath = info.getReceiverPath() + file.Name;
                     if (client.IsConnected)
                     {
 
                         var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            client.UploadFile(fileStream, receiverPath, null);
+                            client.UploadFile(fileStream, filereceivePath, null);
                         }
                         fileStream.Close();
                         file.Delete();
