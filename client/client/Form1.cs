@@ -38,7 +38,7 @@ namespace @finally
             string receiverUsername = "choeypn";
 
             DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
-            FileInfo[] Files = d.GetFiles("*.csv"); //Getting Text files
+            FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
             try
             {
                 Renci.SshNet.ConnectionInfo conn;
@@ -53,17 +53,19 @@ namespace @finally
                 Console.WriteLine("Connection established");
                 var client = new SftpClient(conn);
                 client.Connect();
-                foreach (FileInfo file in Files)
+                foreach (FileInfo file in files)
                 {
+                    string receiverPath = "/home/" + receiverUsername + "/traffic_report/" + file.Name;
                     if (client.IsConnected)
                     {
 
                         var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            string receiverPath = "/home/" + receiverUsername + "/traffic_report/" + file.Name;
                             client.UploadFile(fileStream, receiverPath, null);
                         }
+                        fileStream.Close();
+                        file.Delete();
                     }
                 }
                 client.Disconnect();
@@ -75,6 +77,11 @@ namespace @finally
                 Console.WriteLine("Transaction error :" + ex.ToString());
             }
             showUploadText();
+        }
+
+        private void deleteSentForm(string filename)
+        {
+
         }
 
         private void showUploadText()
