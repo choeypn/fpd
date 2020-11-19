@@ -87,9 +87,15 @@ namespace tempServerProject
 
             foreach (FileInfo file in files)
             {
-                file.MoveTo(destinationPath + "\\" + file.Name);
+                if(!File.Exists(destinationPath + "\\" + file.Name))
+                {
+                    file.MoveTo(destinationPath + "\\" + file.Name);
+                }
+                else
+                {
+                    file.Delete();
+                }
             }
-
         }
     }
 }
