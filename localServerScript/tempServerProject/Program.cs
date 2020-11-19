@@ -22,8 +22,7 @@ namespace tempServerProject
             Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report"));
             String usedReportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report", "recorded_reports");
             Directory.CreateDirectory(usedReportPath);
-            while (true)
-            {
+            
                 string masterCSV = "Date" + "," + "Time" + "," + "Race" + "," + "Gender" + ","
                              + "Hispanic" + "," + "Reason" + "," + "Disposition" + "\n";
                 string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report");
@@ -45,8 +44,7 @@ namespace tempServerProject
                 Console.WriteLine("Saving Master CSV");
                 moveRecordedReports(usedReportPath);
                 saveToCSV(masterCSV);
-                Thread.Sleep(10000);
-            }
+            return;
         }
         public static void saveToCSV(string masterCSV)
         {
