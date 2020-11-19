@@ -44,6 +44,8 @@ namespace @finally
         {
             string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report");
             string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".ssh","id_rsa");
+            string uploadedpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", "uploaded_report");
+            Directory.CreateDirectory(uploadedpath);
             string [] inputInfo = getAdminInfo();
             adminInfo info = new adminInfo(inputInfo);
             DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
@@ -75,7 +77,7 @@ namespace @finally
                             client.UploadFile(fileStream, filereceivePath, null);
                         }
                         fileStream.Close();
-                        file.Delete();
+                        file.MoveTo(uploadedpath+"\\"+file.Name);
                     }
                 }
                 client.Disconnect();
