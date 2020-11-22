@@ -33,7 +33,7 @@ namespace @finally
         private string[] getAdminInfo()
         {
             string[] lines = System.IO.File.ReadAllLines(
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report","admin_info.txt"));
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report","admin_info.txt"));
             return lines;
 
         }
@@ -42,9 +42,9 @@ namespace @finally
         //TODO : I don't know
         private void buttonUpload_Click(object sender, EventArgs e)
         {
-            string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report");
-            string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".ssh","id_rsa");
-            string uploadedpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", "uploaded_report");
+            string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report");
+            string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", ".ssh","id_rsa");
+            string uploadedpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "uploaded_report");
             Directory.CreateDirectory(uploadedpath);
             string [] inputInfo = getAdminInfo();
             adminInfo info = new adminInfo(inputInfo);
