@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\stumb\\.nuget\\packages\\": {}
+    "C:\\Users\\Ferri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\!Projects!\\CSCI\\tempServerProject\\tempServerProject\\tempServerProject.csproj",
+      "projectUniqueName": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj",
       "projectName": "tempServerProject",
-      "projectPath": "F:\\!Projects!\\CSCI\\tempServerProject\\tempServerProject\\tempServerProject.csproj",
-      "packagesPath": "C:\\Users\\stumb\\.nuget\\packages\\",
-      "outputPath": "F:\\!Projects!\\CSCI\\tempServerProject\\tempServerProject\\obj\\",
+      "projectPath": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj",
+      "packagesPath": "C:\\Users\\Ferri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\stumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ferri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

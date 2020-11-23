@@ -74,7 +74,7 @@ namespace @finally
                         var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            client.UploadFile(fileStream, Path.Combine(filereceivePath, "received_report"), null); // changed path
+                            client.UploadFile(fileStream, filereceivePath, null); // changed path
                         }
                         fileStream.Close();
                         file.MoveTo(uploadedpath+"\\"+file.Name);
@@ -182,16 +182,16 @@ namespace @finally
             int num = 1;
             string filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
 
-            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
+            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report"));
 
-            string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"traffic_report",filename);
+            string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),"traffic_report",filename);
             if (File.Exists(fullpath))
             {
                 while (File.Exists(fullpath)) 
                 {
                     num++;
                     filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
-                    fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
+                    fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
                 {

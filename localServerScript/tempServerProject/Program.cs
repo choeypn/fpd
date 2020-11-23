@@ -13,33 +13,35 @@ using System.IO;
 using System.Threading.Tasks;
 namespace tempServerProject
 {
+
+    static class globals
+    {
+        public static string reportsPath;
+    }
     class Program
     {
-
-	private string reportsPath; // made global variable for the path
-
-	private static string[] getAdminInfo() // copied from client code
-	{
-		string[] lines = System.IO.File.ReadAllLines(
-			 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "admin_info.txt"));
-		return lines;
-	}
+	    private static string[] getAdminInfo() // copied from client code
+	    {
+		    string[] lines = System.IO.File.ReadAllLines(
+			     Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "admin_info.txt"));
+		    return lines;
+	    }
 
         static void Main(string[] args)
         {
 
 		Console.WriteLine("Compiling Reports...");
 
-		reportsPath = getAdminInfo()[3]; // initialize the global
+		globals.reportsPath = getAdminInfo()[3]; // initialize the global
             
 
-            Directory.CreateDirectory(Path.Combine(reportsPath, "received_reports")); // changed path
-            String usedReportPath = Path.Combine(reportsPath, "recorded_reports"); // changed path
+            Directory.CreateDirectory(globals.reportsPath); // changed path
+            String usedReportPath = Path.Combine(globals.reportsPath, "recorded_reports"); // changed path
             Directory.CreateDirectory(usedReportPath);
             
                 string masterCSV = "Date" + "," + "Time" + "," + "Race" + "," + "Gender" + ","
                              + "Hispanic" + "," + "Reason" + "," + "Disposition" + "\n";
-                string senderpath = Path.Combine(reportsPath, "received_report");
+                string senderpath = globals.reportsPath;
                 DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
                 FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
 
@@ -58,7 +60,7 @@ namespace tempServerProject
                 Console.WriteLine("Saving Master CSV...");
                 moveRecordedReports(usedReportPath);
                 saveToCSV(masterCSV);
-		Console.WriteLine(Master CSV saved);
+		Console.WriteLine("Master CSV saved");
 		Console.WriteLine("Press enter to exit");
 		Console.ReadLine();
             return;
@@ -67,8 +69,8 @@ namespace tempServerProject
         {
             int num = 1;
             string filename = "!MASTER_CSV" + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + "!" + ".csv";
-            Directory.CreateDirectory(Path.Combine(reportsPath, "received_report")); // changed path
-            string fullpath = Path.Combine(reportsPath, "received_report", filename); // changed path
+            Directory.CreateDirectory(globals.reportsPath); // changed path
+            string fullpath = Path.Combine(globals.reportsPath, filename); // changed path
             
             if (File.Exists(fullpath))
             {
@@ -76,7 +78,7 @@ namespace tempServerProject
                 {
                     num++;
                     filename = "!MASTER_CSV" + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + "!" + ".csv";
-                    fullpath = Path.Combine(reportsPath, "received_report", filename); // changed path
+                    fullpath = Path.Combine(globals.reportsPath, filename); // changed path
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
                 {
@@ -95,7 +97,7 @@ namespace tempServerProject
 
         public static void moveRecordedReports(string destinationPath)
         {
-            string senderpath = Path.Combine(reportsPath, "received_report"); // changed path
+            string senderpath = globals.reportsPath; // changed path
             DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
             FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
 
