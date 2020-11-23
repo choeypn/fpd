@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Renci.SshNet;
+using Renci.SshNet.Sftp;
 
 namespace @finally
 {
@@ -26,11 +28,72 @@ namespace @finally
 
         }
 
+        //NOTE: User must include a text file name "admin_info.txt" in "traffic_report" folder in MyDocuments.
+        //Use README for more information about text formatting. 
+        private string[] getAdminInfo()
+        {
+            string[] lines = System.IO.File.ReadAllLines(
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report","admin_info.txt"));
+            return lines;
+
+        }
+
         //scp files in traffic_report folder to destination
         //TODO : I don't know
         private void buttonUpload_Click(object sender, EventArgs e)
         {
+            string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report");
+            string sshpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", ".ssh","id_rsa");
+            string uploadedpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "uploaded_report");
+            Directory.CreateDirectory(uploadedpath);
+            string [] inputInfo = getAdminInfo();
+            adminInfo info = new adminInfo(inputInfo);
+            DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
+            FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
+            try
+            {
+                Renci.SshNet.ConnectionInfo conn;
+                Console.WriteLine("Attempting to establish connection . . . ");
+                using (var stream = new FileStream(sshpath, FileMode.Open, FileAccess.Read))
+                {
+                    var file = new PrivateKeyFile(stream);
+                    var authMethod = new PrivateKeyAuthenticationMethod(info.getReceiverUsername(), file);
 
+                    conn = new Renci.SshNet.ConnectionInfo(info.getServer(), info.getPort(),
+                                                            info.getReceiverUsername(), authMethod);
+                }
+                Console.WriteLine("Connection established");
+                var client = new SftpClient(conn);
+                client.Connect();
+                foreach (FileInfo file in files)
+                {
+                    string filereceivePath = info.getReceiverPath() + file.Name;
+                    if (client.IsConnected)
+                    {
+
+                        var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
+                        if (fileStream != null)
+                        {
+                            client.UploadFile(fileStream, Path.Combine(filereceivePath, "received_report"), null); // changed path
+                        }
+                        fileStream.Close();
+                        file.MoveTo(uploadedpath+"\\"+file.Name);
+                    }
+                }
+                client.Disconnect();
+                client.Dispose();
+                Console.WriteLine("File(s) uploaded");
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Transaction error :" + ex.ToString());
+            }
+            showUploadText();
+        }
+
+        private void showUploadText()
+        {
+            this.uploadText.Visible = true;
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -117,7 +180,7 @@ namespace @finally
         public static void saveToText()
         {
             int num = 1;
-            string filename = Environment.UserName + "_form" + num + ".csv";
+            string filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
 
             Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report"));
 
@@ -127,7 +190,7 @@ namespace @finally
                 while (File.Exists(fullpath)) 
                 {
                     num++;
-                    filename = Environment.UserName + "_form" + num + ".csv";
+                    filename = Environment.UserName + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + ".csv";
                     fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "traffic_report", filename);
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
@@ -191,6 +254,7 @@ namespace @finally
             clearTextBox(sender, e);
             buttonSubmit.Enabled = true;
             this.outputText.Visible = false;
+            this.uploadText.Visible = false;
             Report.reportClear();
         }
 
@@ -464,6 +528,5 @@ namespace @finally
             Report.setReportVal(0, 4);
             clearTextBox(0);
         }
-
     }
 }

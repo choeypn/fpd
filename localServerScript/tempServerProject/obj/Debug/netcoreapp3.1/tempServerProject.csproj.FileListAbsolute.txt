@@ -1,0 +1,13 @@
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.exe
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.deps.json
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.runtimeconfig.json
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.runtimeconfig.dev.json
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.dll
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.pdb
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.csprojAssemblyReference.cache
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.AssemblyInfoInputs.cache
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.AssemblyInfo.cs
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.csproj.CoreCompileInputs.cache
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.dll
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.pdb
+F:\!Projects!\CSCI\tempServerProject\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.genruntimeconfig.cache

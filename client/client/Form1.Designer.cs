@@ -57,9 +57,9 @@
             this.raceButtonNativeAmerican = new System.Windows.Forms.Button();
             this.raceButtonOther = new System.Windows.Forms.Button();
             this.raceButtonWhite = new System.Windows.Forms.Button();
-
             this.outputText = new System.Windows.Forms.TextBox();
             this.uploadButton = new System.Windows.Forms.Button();
+            this.uploadText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxRace
@@ -410,7 +410,6 @@
             this.raceButtonWhite.Text = "W";
             this.raceButtonWhite.UseVisualStyleBackColor = false;
             this.raceButtonWhite.Click += new System.EventHandler(this.buttonRaceWhite_Click);
-
             // 
             // outputText
             // 
@@ -430,21 +429,36 @@
             this.uploadButton.BackColor = System.Drawing.Color.LightGray;
             this.uploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton.Location = new System.Drawing.Point(696, 454);
-            this.uploadButton.Name = "button1";
+            this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(113, 75);
             this.uploadButton.TabIndex = 21;
             this.uploadButton.Text = "Upload form(s)";
             this.uploadButton.UseVisualStyleBackColor = false;
             this.uploadButton.Click += new System.EventHandler(this.buttonUpload_Click);
             // 
+            // uploadText
+            // 
+            this.uploadText.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.uploadText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uploadText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadText.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.uploadText.Location = new System.Drawing.Point(658, 426);
+            this.uploadText.Name = "uploadText";
+            this.uploadText.ReadOnly = true;
+            this.uploadText.Size = new System.Drawing.Size(161, 22);
+            this.uploadText.TabIndex = 22;
+            this.uploadText.Text = "File(s) uploaded";
+            this.uploadText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.uploadText.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 587);
+            this.Controls.Add(this.uploadText);
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.outputText);
-
             this.Controls.Add(this.raceButtonWhite);
             this.Controls.Add(this.dispositionButtonArrest);
             this.Controls.Add(this.raceButtonOther);
@@ -516,6 +530,7 @@
 
         private System.Windows.Forms.TextBox outputText;
         private System.Windows.Forms.Button uploadButton;
+        private System.Windows.Forms.TextBox uploadText;
     }
 }
 
