@@ -74,7 +74,7 @@ namespace @finally
                         var fileStream = new FileStream(Path.Combine(senderpath,file.Name), FileMode.Open);
                         if (fileStream != null)
                         {
-                            client.UploadFile(fileStream, filereceivePath, null);
+                            client.UploadFile(fileStream, Path.Combine(filereceivePath, "received_report"), null); // changed path
                         }
                         fileStream.Close();
                         file.MoveTo(uploadedpath+"\\"+file.Name);

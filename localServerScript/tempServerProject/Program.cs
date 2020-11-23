@@ -15,17 +15,31 @@ namespace tempServerProject
 {
     class Program
     {
+
+	private string reportsPath; // made global variable for the path
+
+	private static string[] getAdminInfo() // copied from client code
+	{
+		string[] lines = System.IO.File.ReadAllLines(
+			 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "admin_info.txt"));
+		return lines;
+	}
+
         static void Main(string[] args)
         {
+
+		Console.WriteLine("Compiling Reports...");
+
+		reportsPath = getAdminInfo()[3]; // initialize the global
             
 
-            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report"));
-            String usedReportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report", "recorded_reports");
+            Directory.CreateDirectory(Path.Combine(reportsPath, "received_reports")); // changed path
+            String usedReportPath = Path.Combine(reportsPath, "recorded_reports"); // changed path
             Directory.CreateDirectory(usedReportPath);
             
                 string masterCSV = "Date" + "," + "Time" + "," + "Race" + "," + "Gender" + ","
                              + "Hispanic" + "," + "Reason" + "," + "Disposition" + "\n";
-                string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report");
+                string senderpath = Path.Combine(reportsPath, "received_report");
                 DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
                 FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
 
@@ -41,17 +55,20 @@ namespace tempServerProject
        
                 }
 
-                Console.WriteLine("Saving Master CSV");
+                Console.WriteLine("Saving Master CSV...");
                 moveRecordedReports(usedReportPath);
                 saveToCSV(masterCSV);
+		Console.WriteLine(Master CSV saved);
+		Console.WriteLine("Press enter to exit");
+		Console.ReadLine();
             return;
         }
         public static void saveToCSV(string masterCSV)
         {
             int num = 1;
             string filename = "!MASTER_CSV" + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + "!" + ".csv";
-            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report"));
-            string fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report", filename);
+            Directory.CreateDirectory(Path.Combine(reportsPath, "received_report")); // changed path
+            string fullpath = Path.Combine(reportsPath, "received_report", filename); // changed path
             
             if (File.Exists(fullpath))
             {
@@ -59,7 +76,7 @@ namespace tempServerProject
                 {
                     num++;
                     filename = "!MASTER_CSV" + "_" + DateTime.Now.ToString("ddMMyyy_HHmm_") + num + "!" + ".csv";
-                    fullpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report", filename);
+                    fullpath = Path.Combine(reportsPath, "received_report", filename); // changed path
                 }
                 using (StreamWriter sw = File.CreateText(fullpath))
                 {
@@ -78,7 +95,7 @@ namespace tempServerProject
 
         public static void moveRecordedReports(string destinationPath)
         {
-            string senderpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "received_report");
+            string senderpath = Path.Combine(reportsPath, "received_report"); // changed path
             DirectoryInfo d = new DirectoryInfo(senderpath);//Assuming Test is your Folder
             FileInfo[] files = d.GetFiles("*.csv"); //Getting Text files
 
