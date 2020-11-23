@@ -20,12 +20,6 @@ namespace tempServerProject
     }
     class Program
     {
-	    private static string[] getAdminInfo() // copied from client code
-	    {
-		    string[] lines = System.IO.File.ReadAllLines(
-			     Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "admin_info.txt"));
-		    return lines;
-	    }
 
         static void Main(string[] args)
         {
@@ -95,6 +89,13 @@ namespace tempServerProject
             }
         }
 
+        private static string[] getAdminInfo() // copied from client code
+	    {
+		    string[] lines = System.IO.File.ReadAllLines(
+			     Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "traffic_report", "admin_info.txt"));
+		    return lines;
+	    }
+
         public static void moveRecordedReports(string destinationPath)
         {
             string senderpath = globals.reportsPath; // changed path
@@ -116,5 +117,3 @@ namespace tempServerProject
         }
     }
 }
-
-

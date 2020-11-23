@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj": {}
+    "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\tempServerProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj": {
+    "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\tempServerProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj",
+        "projectUniqueName": "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\tempServerProject.csproj",
         "projectName": "tempServerProject",
-        "projectPath": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj",
+        "projectPath": "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\tempServerProject.csproj",
         "packagesPath": "C:\\Users\\Ferri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\obj\\",
+        "outputPath": "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Ferri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -37,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

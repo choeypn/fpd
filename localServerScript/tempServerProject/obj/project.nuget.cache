@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kIK5mP/q8DSBc7iQwlxslJLpFsDPAZbEcnXztQvqKdPUiGoP2St0BiUbZJwj56fBoizJgbcye9j0clRfO27cNA==",
+  "dgSpecHash": "nUd/ih+R1ahHOF2Li+wuDyHw0XgJXajk7m4zxXtEKV5H/jX/WLVVTbzt+J4QcQ0dvkwlkYwFXWmYYRmyVf23IQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ferri\\Source\\Repos\\fpd\\localServerScript\\tempServerProject\\tempServerProject.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Ferri\\OneDrive\\Desktop\\FPD_final\\localServerScript\\tempServerProject\\tempServerProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ferri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
+    "C:\\Users\\Ferri\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\Ferri\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512"
+  ],
   "logs": []
 }

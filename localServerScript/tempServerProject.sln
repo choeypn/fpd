@@ -3,18 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tempServerProject", "tempServerProject\tempServerProject.csproj", "{4712F439-739D-413B-B9A6-61BE0D7C5E57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tempServerProject", "tempServerProject\tempServerProject.csproj", "{4712F439-739D-413B-B9A6-61BE0D7C5E57}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "traffic_report_server_installer", "traffic_report_server_installer\traffic_report_server_installer.aiproj", "{49363786-9057-4854-9468-3B3D30A00158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.All|Any CPU.Build.0 = Release|Any CPU
 		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4712F439-739D-413B-B9A6-61BE0D7C5E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49363786-9057-4854-9468-3B3D30A00158}.All|Any CPU.ActiveCfg = DefaultBuild
+		{49363786-9057-4854-9468-3B3D30A00158}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{49363786-9057-4854-9468-3B3D30A00158}.Debug|Any CPU.Build.0 = DefaultBuild
+		{49363786-9057-4854-9468-3B3D30A00158}.Release|Any CPU.ActiveCfg = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

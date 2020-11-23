@@ -1,20 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clientProject", "client\clientProject.csproj", "{49E7E245-9DB4-4E7B-A527-47A667D75C60}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Traffic_report_client_installer", "Traffic_report_client_installer\Traffic_report_client_installer.aiproj", "{568D19AF-BF92-4CB9-AD49-A60289BA77D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.All|Any CPU.Build.0 = Release|Any CPU
 		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E7E245-9DB4-4E7B-A527-47A667D75C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{568D19AF-BF92-4CB9-AD49-A60289BA77D2}.All|Any CPU.ActiveCfg = DefaultBuild
+		{568D19AF-BF92-4CB9-AD49-A60289BA77D2}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{568D19AF-BF92-4CB9-AD49-A60289BA77D2}.Debug|Any CPU.Build.0 = DefaultBuild
+		{568D19AF-BF92-4CB9-AD49-A60289BA77D2}.Release|Any CPU.ActiveCfg = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

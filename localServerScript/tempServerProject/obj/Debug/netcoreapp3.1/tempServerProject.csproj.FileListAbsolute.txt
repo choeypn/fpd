@@ -24,3 +24,16 @@ C:\Users\Ferri\Source\Repos\fpd\localServerScript\tempServerProject\obj\Debug\ne
 C:\Users\Ferri\Source\Repos\fpd\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.dll
 C:\Users\Ferri\Source\Repos\fpd\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.pdb
 C:\Users\Ferri\Source\Repos\fpd\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.genruntimeconfig.cache
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.exe
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.deps.json
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.runtimeconfig.json
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.runtimeconfig.dev.json
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.dll
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\bin\Debug\netcoreapp3.1\tempServerProject.pdb
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.csprojAssemblyReference.cache
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.AssemblyInfoInputs.cache
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.AssemblyInfo.cs
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.dll
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.pdb
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.genruntimeconfig.cache
+C:\Users\Ferri\OneDrive\Desktop\FPD_final\localServerScript\tempServerProject\obj\Debug\netcoreapp3.1\tempServerProject.csproj.CoreCompileInputs.cache
